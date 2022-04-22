@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Apr 21 20:31:43 2022
+Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Revision Name : decodificadorBCD
+Top-level Entity Name : decodificadorBCD
+Family : Cyclone IV E
+Total logic elements : 8
+    Total combinational functions : 8
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 13
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
