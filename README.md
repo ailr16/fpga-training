@@ -1,2 +1,2 @@
-# fpgaPruebas
-Algunos proyectos con FPGA
+# fpga-training
+Some projects with FPGA (Verilog-VHDL)
