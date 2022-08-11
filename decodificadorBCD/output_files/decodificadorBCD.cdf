@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE6E22) Path("/home/ailr16/Documentos/fpgaPruebas/decodificadorBCD/output_files/") File("decodificadorBCD.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE6E22) Path("C:/Users/angel/OneDrive/Documentos/GitHub/fpgaPruebas/decodificadorBCD/output_files/") File("decodificadorBCD.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
