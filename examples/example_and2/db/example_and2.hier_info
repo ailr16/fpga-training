@@ -1,0 +1,6 @@
+|example_and2
+x1 => z1.IN0
+x2 => z1.IN1
+z1 <= z1.DB_MAX_OUTPUT_PORT_TYPE
+
+

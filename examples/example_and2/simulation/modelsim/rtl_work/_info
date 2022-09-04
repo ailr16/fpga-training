@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/angel/OneDrive/Documentos/GitHub/fpgaPruebas/examples/example_and2/simulation/modelsim
+vexample_and2
+!s110 1662313394
+!i10b 1
+!s100 <FD[iD<TR`=:o13ARdEa93
+Ic5FQ1e]ojLNO@7AkXIgza3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1662273331
+8C:/Users/angel/OneDrive/Documentos/GitHub/fpgaPruebas/examples/example_and2/example_and2.v
+FC:/Users/angel/OneDrive/Documentos/GitHub/fpgaPruebas/examples/example_and2/example_and2.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1662313394.000000
+!s107 C:/Users/angel/OneDrive/Documentos/GitHub/fpgaPruebas/examples/example_and2/example_and2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/angel/OneDrive/Documentos/GitHub/fpgaPruebas/examples/example_and2|C:/Users/angel/OneDrive/Documentos/GitHub/fpgaPruebas/examples/example_and2/example_and2.v|
+!i113 1
+Z3 o-vlog01compat -work work
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/angel/OneDrive/Documentos/GitHub/fpgaPruebas/examples/example_and2
+Z5 tCvgOpt 0
+vexample_and2_tb
+!s110 1662313395
+!i10b 1
+!s100 efcE045?XQZSV`CX<;7H81
+Ii@f=8LMNF2@2ln:khZad[1
+R1
+R0
+w1662313373
+8C:/Users/angel/OneDrive/Documentos/GitHub/fpgaPruebas/examples/example_and2/example_and2_tb.v
+FC:/Users/angel/OneDrive/Documentos/GitHub/fpgaPruebas/examples/example_and2/example_and2_tb.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1662313395.000000
+!s107 C:/Users/angel/OneDrive/Documentos/GitHub/fpgaPruebas/examples/example_and2/example_and2_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/angel/OneDrive/Documentos/GitHub/fpgaPruebas/examples/example_and2|C:/Users/angel/OneDrive/Documentos/GitHub/fpgaPruebas/examples/example_and2/example_and2_tb.v|
+!i113 1
+R3
+R4
+R5
