@@ -1,0 +1,63 @@
+|project_7segment
+x1 => x1.IN1
+x2 => x2.IN1
+x3 => x3.IN1
+x4 => x4.IN1
+ya << bcd_decoder:inst1.ya
+yb << bcd_decoder:inst1.yb
+yc << bcd_decoder:inst1.yc
+yd << bcd_decoder:inst1.yd
+ye << bcd_decoder:inst1.ye
+yf << bcd_decoder:inst1.yf
+yg << bcd_decoder:inst1.yg
+yp << bcd_decoder:inst1.yp
+yen << bcd_decoder:inst1.yen
+
+
+|project_7segment|bcd_decoder:inst1
+A => ya.IN0
+A => yb.IN0
+A => yd.IN0
+A => yp.IN1
+A => ya.IN0
+A => yd.IN0
+A => yd.IN0
+A => ye.IN1
+A => yf.IN0
+B => ya.IN1
+B => yd.IN1
+B => ye.IN0
+B => yg.IN0
+B => ya.IN0
+B => yb.IN1
+B => yd.IN1
+B => yf.IN0
+C => ya.IN1
+C => yc.IN1
+C => yf.IN1
+C => yf.IN1
+C => yg.IN1
+C => ya.IN0
+C => ya.IN1
+C => yb.IN1
+C => yb.IN1
+C => yd.IN1
+C => yd.IN1
+C => ye.IN1
+D => ya.IN1
+D => yf.IN1
+D => yg.IN1
+D => ya.IN1
+D => ya.IN1
+D => yd.IN1
+ya <= ya.DB_MAX_OUTPUT_PORT_TYPE
+yb <= yb.DB_MAX_OUTPUT_PORT_TYPE
+yc <= yc.DB_MAX_OUTPUT_PORT_TYPE
+yd <= yd.DB_MAX_OUTPUT_PORT_TYPE
+ye <= ye.DB_MAX_OUTPUT_PORT_TYPE
+yf <= yf.DB_MAX_OUTPUT_PORT_TYPE
+yg <= yg.DB_MAX_OUTPUT_PORT_TYPE
+yp <= yp.DB_MAX_OUTPUT_PORT_TYPE
+yen <= <GND>
+
+

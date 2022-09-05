@@ -1,0 +1,57 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ya",
+					"strict" : false
+				},
+				{
+					"name" : "yb",
+					"strict" : false
+				},
+				{
+					"name" : "yc",
+					"strict" : false
+				},
+				{
+					"name" : "yd",
+					"strict" : false
+				},
+				{
+					"name" : "ye",
+					"strict" : false
+				},
+				{
+					"name" : "yf",
+					"strict" : false
+				},
+				{
+					"name" : "yg",
+					"strict" : false
+				},
+				{
+					"name" : "yp",
+					"strict" : false
+				},
+				{
+					"name" : "B",
+					"strict" : false
+				},
+				{
+					"name" : "D",
+					"strict" : false
+				},
+				{
+					"name" : "A",
+					"strict" : false
+				},
+				{
+					"name" : "C",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

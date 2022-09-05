@@ -29,7 +29,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "example_and2")
-  (DATE "09/04/2022 13:22:11")
+  (DATE "09/04/2022 13:39:27")
   (VENDOR "Altera")
   (PROGRAM "Quartus Prime")
   (VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition")
@@ -41,7 +41,7 @@
     (INSTANCE z1\~output)
     (DELAY
       (ABSOLUTE
-        (PORT i (339:339:339) (390:390:390))
+        (PORT i (416:416:416) (456:456:456))
         (IOPATH i o (1619:1619:1619) (1644:1644:1644))
       )
     )
@@ -69,9 +69,9 @@
     (INSTANCE z1\~0)
     (DELAY
       (ABSOLUTE
-        (PORT datab (222:222:222) (201:201:201))
-        (PORT datad (182:182:182) (172:172:172))
-        (IOPATH datab combout (168:168:168) (167:167:167))
+        (PORT datac (537:537:537) (486:486:486))
+        (PORT datad (545:545:545) (489:489:489))
+        (IOPATH datac combout (119:119:119) (124:124:124))
         (IOPATH datad combout (68:68:68) (63:63:63))
       )
     )
