@@ -1,0 +1,26 @@
+module swo(clk, out);
+
+input clk;
+output out;
+
+reg [31:0] counter;
+reg status;
+
+initial
+	begin
+		counter <= 32'b0;
+		status <= 1'b0;
+	end
+
+always @ (posedge clk)
+	begin
+		counter <= counter + 1'b1;
+		if(counter > 2500000)
+		begin
+			status <= !LED_status;
+			counter <= 32'b0;
+		end
+	end
+	assign out = LED_status;
+
+endmodule
