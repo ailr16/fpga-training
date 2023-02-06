@@ -1,0 +1,15 @@
+|testProject
+a[0] => z.IN0
+a[1] => z.IN0
+a[2] => z.IN0
+a[3] => z.IN0
+b[0] => z.IN1
+b[1] => z.IN1
+b[2] => z.IN1
+b[3] => z.IN1
+z[0] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[2] <= z.DB_MAX_OUTPUT_PORT_TYPE
+z[3] <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+

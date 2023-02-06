@@ -1,0 +1,55 @@
+# Reading pref.tcl
+# do testProject_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/ailozano/OneDrive\ -\ Intel\ Corporation/Documents/github/fpga-training/dioneCPLD/testProject {C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/dioneCPLD/testProject/testProject.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:03:07 on Feb 05,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/dioneCPLD/testProject" C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/dioneCPLD/testProject/testProject.v 
+# -- Compiling module testProject
+# 
+# Top level modules:
+# 	testProject
+# End time: 22:03:07 on Feb 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/ailozano/OneDrive\ -\ Intel\ Corporation/Documents/github/fpga-training/dioneCPLD/testProject/output_files {C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/dioneCPLD/testProject/output_files/testProject_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:03:07 on Feb 05,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/dioneCPLD/testProject/output_files" C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/dioneCPLD/testProject/output_files/testProject_tb.v 
+# -- Compiling module testProject_tb
+# 
+# Top level modules:
+# 	testProject_tb
+# End time: 22:03:07 on Feb 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L maxii_ver -L rtl_work -L work -voptargs="+acc"  testProject_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L maxii_ver -L rtl_work -L work -voptargs=""+acc"" testProject_tb 
+# Start time: 22:03:07 on Feb 05,2023
+# Loading work.testProject_tb
+# Loading work.testProject
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# a = 0000, b = 0000, z = 0100
+# a = 0000, b = 1111, z = 1110
+# a = 1111, b = 0000, z = 1110
+# a = 1111, b = 1111, z = 0011
+# ** Note: $stop    : C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/dioneCPLD/testProject/output_files/testProject_tb.v(23)
+#    Time: 40 ps  Iteration: 0  Instance: /testProject_tb
+# Break in Module testProject_tb at C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/dioneCPLD/testProject/output_files/testProject_tb.v line 23
+# End time: 22:09:54 on Feb 05,2023, Elapsed time: 0:06:47
+# Errors: 0, Warnings: 0
