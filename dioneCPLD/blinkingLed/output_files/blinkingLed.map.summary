@@ -1,0 +1,9 @@
+Analysis & Synthesis Status : Successful - Mon Feb 06 00:05:11 2023
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : blinkingLed
+Top-level Entity Name : blinkingLed
+Family : MAX II
+Total logic elements : 42
+Total pins : 2
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )
