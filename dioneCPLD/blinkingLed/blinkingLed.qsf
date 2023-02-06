@@ -56,5 +56,13 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name VERILOG_FILE blinkingLed.v
-set_location_assignment PIN_41 -to LED
 set_location_assignment PIN_12 -to clk
+set_global_assignment -name VERILOG_FILE led_blink.v
+set_location_assignment PIN_41 -to LED[7]
+set_location_assignment PIN_40 -to LED[6]
+set_location_assignment PIN_39 -to LED[5]
+set_location_assignment PIN_38 -to LED[4]
+set_location_assignment PIN_37 -to LED[3]
+set_location_assignment PIN_36 -to LED[2]
+set_location_assignment PIN_35 -to LED[1]
+set_location_assignment PIN_34 -to LED[0]

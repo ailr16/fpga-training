@@ -96,14 +96,14 @@ GND*                         : 30        :        :                   :         
 VCCIO1                       : 31        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 32        : gnd    :                   :         :           :                
 GND*                         : 33        :        :                   :         : 1         :                
-GND*                         : 34        :        :                   :         : 1         :                
-GND*                         : 35        :        :                   :         : 1         :                
-GND*                         : 36        :        :                   :         : 1         :                
-GND*                         : 37        :        :                   :         : 1         :                
-GND*                         : 38        :        :                   :         : 1         :                
-GND*                         : 39        :        :                   :         : 1         :                
-GND*                         : 40        :        :                   :         : 1         :                
-LED                          : 41        : output : 3.3-V LVTTL       :         : 1         : Y              
+LED[0]                       : 34        : output : 3.3-V LVTTL       :         : 1         : Y              
+LED[1]                       : 35        : output : 3.3-V LVTTL       :         : 1         : Y              
+LED[2]                       : 36        : output : 3.3-V LVTTL       :         : 1         : Y              
+LED[3]                       : 37        : output : 3.3-V LVTTL       :         : 1         : Y              
+LED[4]                       : 38        : output : 3.3-V LVTTL       :         : 1         : Y              
+LED[5]                       : 39        : output : 3.3-V LVTTL       :         : 1         : Y              
+LED[6]                       : 40        : output : 3.3-V LVTTL       :         : 1         : Y              
+LED[7]                       : 41        : output : 3.3-V LVTTL       :         : 1         : Y              
 GND*                         : 42        :        :                   :         : 1         :                
 GND*                         : 43        :        :                   :         : 1         :                
 GND*                         : 44        :        :                   :         : 1         :                

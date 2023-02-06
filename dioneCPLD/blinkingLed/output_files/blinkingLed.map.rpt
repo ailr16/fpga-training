@@ -1,5 +1,5 @@
 Analysis & Synthesis report for blinkingLed
-Mon Feb 06 00:05:11 2023
+Mon Feb 06 17:07:29 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,8 +13,9 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -41,13 +42,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Feb 06 00:05:11 2023       ;
+; Analysis & Synthesis Status ; Successful - Mon Feb 06 17:07:29 2023       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; blinkingLed                                 ;
 ; Top-level Entity Name       ; blinkingLed                                 ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 42                                          ;
-; Total pins                  ; 2                                           ;
+; Total logic elements        ; 43                                          ;
+; Total pins                  ; 9                                           ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -146,52 +147,294 @@ https://fpgasoftware.intel.com/eula.
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                      ; Library ;
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
 ; blinkingLed.v                    ; yes             ; User Verilog HDL File  ; C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/dioneCPLD/blinkingLed/blinkingLed.v ;         ;
+; led_blink.v                      ; yes             ; User Verilog HDL File  ; C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/dioneCPLD/blinkingLed/led_blink.v   ;         ;
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Total logic elements                        ; 42          ;
-;     -- Combinational with no register       ; 9           ;
-;     -- Register only                        ; 0           ;
-;     -- Combinational with a register        ; 33          ;
-;                                             ;             ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 9           ;
-;     -- 3 input functions                    ; 0           ;
-;     -- 2 input functions                    ; 32          ;
-;     -- 1 input functions                    ; 1           ;
-;     -- 0 input functions                    ; 0           ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 11          ;
-;     -- arithmetic mode                      ; 31          ;
-;     -- qfbk mode                            ; 0           ;
-;     -- register cascade mode                ; 0           ;
-;     -- synchronous clear/load mode          ; 32          ;
-;     -- asynchronous clear/load mode         ; 0           ;
-;                                             ;             ;
-; Total registers                             ; 33          ;
-; Total logic cells in carry chains           ; 32          ;
-; I/O pins                                    ; 2           ;
-; Maximum fan-out node                        ; LessThan0~8 ;
-; Maximum fan-out                             ; 33          ;
-; Total fan-out                               ; 167         ;
-; Average fan-out                             ; 3.80        ;
-+---------------------------------------------+-------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                               ;
++---------------------------------------------+-----------------------------+
+; Resource                                    ; Usage                       ;
++---------------------------------------------+-----------------------------+
+; Total logic elements                        ; 43                          ;
+;     -- Combinational with no register       ; 10                          ;
+;     -- Register only                        ; 0                           ;
+;     -- Combinational with a register        ; 33                          ;
+;                                             ;                             ;
+; Logic element usage by number of LUT inputs ;                             ;
+;     -- 4 input functions                    ; 7                           ;
+;     -- 3 input functions                    ; 3                           ;
+;     -- 2 input functions                    ; 32                          ;
+;     -- 1 input functions                    ; 1                           ;
+;     -- 0 input functions                    ; 0                           ;
+;                                             ;                             ;
+; Logic elements by mode                      ;                             ;
+;     -- normal mode                          ; 12                          ;
+;     -- arithmetic mode                      ; 31                          ;
+;     -- qfbk mode                            ; 0                           ;
+;     -- register cascade mode                ; 0                           ;
+;     -- synchronous clear/load mode          ; 32                          ;
+;     -- asynchronous clear/load mode         ; 0                           ;
+;                                             ;                             ;
+; Total registers                             ; 33                          ;
+; Total logic cells in carry chains           ; 32                          ;
+; I/O pins                                    ; 9                           ;
+; Maximum fan-out node                        ; led_blink:inst1|LessThan0~9 ;
+; Maximum fan-out                             ; 33                          ;
+; Total fan-out                               ; 175                         ;
+; Average fan-out                             ; 3.37                        ;
++---------------------------------------------+-----------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
-; |blinkingLed               ; 42 (42)     ; 33           ; 0          ; 2    ; 0            ; 9 (9)        ; 0 (0)             ; 33 (33)          ; 32 (32)         ; 0 (0)      ; |blinkingLed        ; blinkingLed ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name          ; Entity Name ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------+-------------+--------------+
+; |blinkingLed               ; 43 (0)      ; 33           ; 0          ; 9    ; 0            ; 10 (0)       ; 0 (0)             ; 33 (0)           ; 32 (0)          ; 0 (0)      ; |blinkingLed                 ; blinkingLed ; work         ;
+;    |led_blink:inst1|       ; 43 (43)     ; 33           ; 0          ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 33 (33)          ; 32 (32)         ; 0 (0)      ; |blinkingLed|led_blink:inst1 ; led_blink   ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                ;
++-----------------------------------------+-----------------------------------------+
+; Register name                           ; Reason for Removal                      ;
++-----------------------------------------+-----------------------------------------+
+; led_blink:inst2|state                   ; Merged with led_blink:inst1|state       ;
+; led_blink:inst3|state                   ; Merged with led_blink:inst1|state       ;
+; led_blink:inst4|state                   ; Merged with led_blink:inst1|state       ;
+; led_blink:inst5|state                   ; Merged with led_blink:inst1|state       ;
+; led_blink:inst6|state                   ; Merged with led_blink:inst1|state       ;
+; led_blink:inst7|state                   ; Merged with led_blink:inst1|state       ;
+; led_blink:inst8|state                   ; Merged with led_blink:inst1|state       ;
+; led_blink:inst2|counter[31]             ; Merged with led_blink:inst1|counter[31] ;
+; led_blink:inst3|counter[31]             ; Merged with led_blink:inst1|counter[31] ;
+; led_blink:inst4|counter[31]             ; Merged with led_blink:inst1|counter[31] ;
+; led_blink:inst5|counter[31]             ; Merged with led_blink:inst1|counter[31] ;
+; led_blink:inst6|counter[31]             ; Merged with led_blink:inst1|counter[31] ;
+; led_blink:inst7|counter[31]             ; Merged with led_blink:inst1|counter[31] ;
+; led_blink:inst8|counter[31]             ; Merged with led_blink:inst1|counter[31] ;
+; led_blink:inst2|counter[30]             ; Merged with led_blink:inst1|counter[30] ;
+; led_blink:inst3|counter[30]             ; Merged with led_blink:inst1|counter[30] ;
+; led_blink:inst4|counter[30]             ; Merged with led_blink:inst1|counter[30] ;
+; led_blink:inst5|counter[30]             ; Merged with led_blink:inst1|counter[30] ;
+; led_blink:inst6|counter[30]             ; Merged with led_blink:inst1|counter[30] ;
+; led_blink:inst7|counter[30]             ; Merged with led_blink:inst1|counter[30] ;
+; led_blink:inst8|counter[30]             ; Merged with led_blink:inst1|counter[30] ;
+; led_blink:inst2|counter[29]             ; Merged with led_blink:inst1|counter[29] ;
+; led_blink:inst3|counter[29]             ; Merged with led_blink:inst1|counter[29] ;
+; led_blink:inst4|counter[29]             ; Merged with led_blink:inst1|counter[29] ;
+; led_blink:inst5|counter[29]             ; Merged with led_blink:inst1|counter[29] ;
+; led_blink:inst6|counter[29]             ; Merged with led_blink:inst1|counter[29] ;
+; led_blink:inst7|counter[29]             ; Merged with led_blink:inst1|counter[29] ;
+; led_blink:inst8|counter[29]             ; Merged with led_blink:inst1|counter[29] ;
+; led_blink:inst2|counter[28]             ; Merged with led_blink:inst1|counter[28] ;
+; led_blink:inst3|counter[28]             ; Merged with led_blink:inst1|counter[28] ;
+; led_blink:inst4|counter[28]             ; Merged with led_blink:inst1|counter[28] ;
+; led_blink:inst5|counter[28]             ; Merged with led_blink:inst1|counter[28] ;
+; led_blink:inst6|counter[28]             ; Merged with led_blink:inst1|counter[28] ;
+; led_blink:inst7|counter[28]             ; Merged with led_blink:inst1|counter[28] ;
+; led_blink:inst8|counter[28]             ; Merged with led_blink:inst1|counter[28] ;
+; led_blink:inst2|counter[27]             ; Merged with led_blink:inst1|counter[27] ;
+; led_blink:inst3|counter[27]             ; Merged with led_blink:inst1|counter[27] ;
+; led_blink:inst4|counter[27]             ; Merged with led_blink:inst1|counter[27] ;
+; led_blink:inst5|counter[27]             ; Merged with led_blink:inst1|counter[27] ;
+; led_blink:inst6|counter[27]             ; Merged with led_blink:inst1|counter[27] ;
+; led_blink:inst7|counter[27]             ; Merged with led_blink:inst1|counter[27] ;
+; led_blink:inst8|counter[27]             ; Merged with led_blink:inst1|counter[27] ;
+; led_blink:inst2|counter[26]             ; Merged with led_blink:inst1|counter[26] ;
+; led_blink:inst3|counter[26]             ; Merged with led_blink:inst1|counter[26] ;
+; led_blink:inst4|counter[26]             ; Merged with led_blink:inst1|counter[26] ;
+; led_blink:inst5|counter[26]             ; Merged with led_blink:inst1|counter[26] ;
+; led_blink:inst6|counter[26]             ; Merged with led_blink:inst1|counter[26] ;
+; led_blink:inst7|counter[26]             ; Merged with led_blink:inst1|counter[26] ;
+; led_blink:inst8|counter[26]             ; Merged with led_blink:inst1|counter[26] ;
+; led_blink:inst2|counter[25]             ; Merged with led_blink:inst1|counter[25] ;
+; led_blink:inst3|counter[25]             ; Merged with led_blink:inst1|counter[25] ;
+; led_blink:inst4|counter[25]             ; Merged with led_blink:inst1|counter[25] ;
+; led_blink:inst5|counter[25]             ; Merged with led_blink:inst1|counter[25] ;
+; led_blink:inst6|counter[25]             ; Merged with led_blink:inst1|counter[25] ;
+; led_blink:inst7|counter[25]             ; Merged with led_blink:inst1|counter[25] ;
+; led_blink:inst8|counter[25]             ; Merged with led_blink:inst1|counter[25] ;
+; led_blink:inst2|counter[24]             ; Merged with led_blink:inst1|counter[24] ;
+; led_blink:inst3|counter[24]             ; Merged with led_blink:inst1|counter[24] ;
+; led_blink:inst4|counter[24]             ; Merged with led_blink:inst1|counter[24] ;
+; led_blink:inst5|counter[24]             ; Merged with led_blink:inst1|counter[24] ;
+; led_blink:inst6|counter[24]             ; Merged with led_blink:inst1|counter[24] ;
+; led_blink:inst7|counter[24]             ; Merged with led_blink:inst1|counter[24] ;
+; led_blink:inst8|counter[24]             ; Merged with led_blink:inst1|counter[24] ;
+; led_blink:inst2|counter[23]             ; Merged with led_blink:inst1|counter[23] ;
+; led_blink:inst3|counter[23]             ; Merged with led_blink:inst1|counter[23] ;
+; led_blink:inst4|counter[23]             ; Merged with led_blink:inst1|counter[23] ;
+; led_blink:inst5|counter[23]             ; Merged with led_blink:inst1|counter[23] ;
+; led_blink:inst6|counter[23]             ; Merged with led_blink:inst1|counter[23] ;
+; led_blink:inst7|counter[23]             ; Merged with led_blink:inst1|counter[23] ;
+; led_blink:inst8|counter[23]             ; Merged with led_blink:inst1|counter[23] ;
+; led_blink:inst2|counter[22]             ; Merged with led_blink:inst1|counter[22] ;
+; led_blink:inst3|counter[22]             ; Merged with led_blink:inst1|counter[22] ;
+; led_blink:inst4|counter[22]             ; Merged with led_blink:inst1|counter[22] ;
+; led_blink:inst5|counter[22]             ; Merged with led_blink:inst1|counter[22] ;
+; led_blink:inst6|counter[22]             ; Merged with led_blink:inst1|counter[22] ;
+; led_blink:inst7|counter[22]             ; Merged with led_blink:inst1|counter[22] ;
+; led_blink:inst8|counter[22]             ; Merged with led_blink:inst1|counter[22] ;
+; led_blink:inst2|counter[21]             ; Merged with led_blink:inst1|counter[21] ;
+; led_blink:inst3|counter[21]             ; Merged with led_blink:inst1|counter[21] ;
+; led_blink:inst4|counter[21]             ; Merged with led_blink:inst1|counter[21] ;
+; led_blink:inst5|counter[21]             ; Merged with led_blink:inst1|counter[21] ;
+; led_blink:inst6|counter[21]             ; Merged with led_blink:inst1|counter[21] ;
+; led_blink:inst7|counter[21]             ; Merged with led_blink:inst1|counter[21] ;
+; led_blink:inst8|counter[21]             ; Merged with led_blink:inst1|counter[21] ;
+; led_blink:inst2|counter[20]             ; Merged with led_blink:inst1|counter[20] ;
+; led_blink:inst3|counter[20]             ; Merged with led_blink:inst1|counter[20] ;
+; led_blink:inst4|counter[20]             ; Merged with led_blink:inst1|counter[20] ;
+; led_blink:inst5|counter[20]             ; Merged with led_blink:inst1|counter[20] ;
+; led_blink:inst6|counter[20]             ; Merged with led_blink:inst1|counter[20] ;
+; led_blink:inst7|counter[20]             ; Merged with led_blink:inst1|counter[20] ;
+; led_blink:inst8|counter[20]             ; Merged with led_blink:inst1|counter[20] ;
+; led_blink:inst2|counter[19]             ; Merged with led_blink:inst1|counter[19] ;
+; led_blink:inst3|counter[19]             ; Merged with led_blink:inst1|counter[19] ;
+; led_blink:inst4|counter[19]             ; Merged with led_blink:inst1|counter[19] ;
+; led_blink:inst5|counter[19]             ; Merged with led_blink:inst1|counter[19] ;
+; led_blink:inst6|counter[19]             ; Merged with led_blink:inst1|counter[19] ;
+; led_blink:inst7|counter[19]             ; Merged with led_blink:inst1|counter[19] ;
+; led_blink:inst8|counter[19]             ; Merged with led_blink:inst1|counter[19] ;
+; led_blink:inst2|counter[18]             ; Merged with led_blink:inst1|counter[18] ;
+; led_blink:inst3|counter[18]             ; Merged with led_blink:inst1|counter[18] ;
+; led_blink:inst4|counter[18]             ; Merged with led_blink:inst1|counter[18] ;
+; led_blink:inst5|counter[18]             ; Merged with led_blink:inst1|counter[18] ;
+; led_blink:inst6|counter[18]             ; Merged with led_blink:inst1|counter[18] ;
+; led_blink:inst7|counter[18]             ; Merged with led_blink:inst1|counter[18] ;
+; led_blink:inst8|counter[18]             ; Merged with led_blink:inst1|counter[18] ;
+; led_blink:inst2|counter[17]             ; Merged with led_blink:inst1|counter[17] ;
+; led_blink:inst3|counter[17]             ; Merged with led_blink:inst1|counter[17] ;
+; led_blink:inst4|counter[17]             ; Merged with led_blink:inst1|counter[17] ;
+; led_blink:inst5|counter[17]             ; Merged with led_blink:inst1|counter[17] ;
+; led_blink:inst6|counter[17]             ; Merged with led_blink:inst1|counter[17] ;
+; led_blink:inst7|counter[17]             ; Merged with led_blink:inst1|counter[17] ;
+; led_blink:inst8|counter[17]             ; Merged with led_blink:inst1|counter[17] ;
+; led_blink:inst2|counter[16]             ; Merged with led_blink:inst1|counter[16] ;
+; led_blink:inst3|counter[16]             ; Merged with led_blink:inst1|counter[16] ;
+; led_blink:inst4|counter[16]             ; Merged with led_blink:inst1|counter[16] ;
+; led_blink:inst5|counter[16]             ; Merged with led_blink:inst1|counter[16] ;
+; led_blink:inst6|counter[16]             ; Merged with led_blink:inst1|counter[16] ;
+; led_blink:inst7|counter[16]             ; Merged with led_blink:inst1|counter[16] ;
+; led_blink:inst8|counter[16]             ; Merged with led_blink:inst1|counter[16] ;
+; led_blink:inst2|counter[15]             ; Merged with led_blink:inst1|counter[15] ;
+; led_blink:inst3|counter[15]             ; Merged with led_blink:inst1|counter[15] ;
+; led_blink:inst4|counter[15]             ; Merged with led_blink:inst1|counter[15] ;
+; led_blink:inst5|counter[15]             ; Merged with led_blink:inst1|counter[15] ;
+; led_blink:inst6|counter[15]             ; Merged with led_blink:inst1|counter[15] ;
+; led_blink:inst7|counter[15]             ; Merged with led_blink:inst1|counter[15] ;
+; led_blink:inst8|counter[15]             ; Merged with led_blink:inst1|counter[15] ;
+; led_blink:inst2|counter[14]             ; Merged with led_blink:inst1|counter[14] ;
+; led_blink:inst3|counter[14]             ; Merged with led_blink:inst1|counter[14] ;
+; led_blink:inst4|counter[14]             ; Merged with led_blink:inst1|counter[14] ;
+; led_blink:inst5|counter[14]             ; Merged with led_blink:inst1|counter[14] ;
+; led_blink:inst6|counter[14]             ; Merged with led_blink:inst1|counter[14] ;
+; led_blink:inst7|counter[14]             ; Merged with led_blink:inst1|counter[14] ;
+; led_blink:inst8|counter[14]             ; Merged with led_blink:inst1|counter[14] ;
+; led_blink:inst2|counter[13]             ; Merged with led_blink:inst1|counter[13] ;
+; led_blink:inst3|counter[13]             ; Merged with led_blink:inst1|counter[13] ;
+; led_blink:inst4|counter[13]             ; Merged with led_blink:inst1|counter[13] ;
+; led_blink:inst5|counter[13]             ; Merged with led_blink:inst1|counter[13] ;
+; led_blink:inst6|counter[13]             ; Merged with led_blink:inst1|counter[13] ;
+; led_blink:inst7|counter[13]             ; Merged with led_blink:inst1|counter[13] ;
+; led_blink:inst8|counter[13]             ; Merged with led_blink:inst1|counter[13] ;
+; led_blink:inst2|counter[12]             ; Merged with led_blink:inst1|counter[12] ;
+; led_blink:inst3|counter[12]             ; Merged with led_blink:inst1|counter[12] ;
+; led_blink:inst4|counter[12]             ; Merged with led_blink:inst1|counter[12] ;
+; led_blink:inst5|counter[12]             ; Merged with led_blink:inst1|counter[12] ;
+; led_blink:inst6|counter[12]             ; Merged with led_blink:inst1|counter[12] ;
+; led_blink:inst7|counter[12]             ; Merged with led_blink:inst1|counter[12] ;
+; led_blink:inst8|counter[12]             ; Merged with led_blink:inst1|counter[12] ;
+; led_blink:inst2|counter[11]             ; Merged with led_blink:inst1|counter[11] ;
+; led_blink:inst3|counter[11]             ; Merged with led_blink:inst1|counter[11] ;
+; led_blink:inst4|counter[11]             ; Merged with led_blink:inst1|counter[11] ;
+; led_blink:inst5|counter[11]             ; Merged with led_blink:inst1|counter[11] ;
+; led_blink:inst6|counter[11]             ; Merged with led_blink:inst1|counter[11] ;
+; led_blink:inst7|counter[11]             ; Merged with led_blink:inst1|counter[11] ;
+; led_blink:inst8|counter[11]             ; Merged with led_blink:inst1|counter[11] ;
+; led_blink:inst2|counter[10]             ; Merged with led_blink:inst1|counter[10] ;
+; led_blink:inst3|counter[10]             ; Merged with led_blink:inst1|counter[10] ;
+; led_blink:inst4|counter[10]             ; Merged with led_blink:inst1|counter[10] ;
+; led_blink:inst5|counter[10]             ; Merged with led_blink:inst1|counter[10] ;
+; led_blink:inst6|counter[10]             ; Merged with led_blink:inst1|counter[10] ;
+; led_blink:inst7|counter[10]             ; Merged with led_blink:inst1|counter[10] ;
+; led_blink:inst8|counter[10]             ; Merged with led_blink:inst1|counter[10] ;
+; led_blink:inst2|counter[9]              ; Merged with led_blink:inst1|counter[9]  ;
+; led_blink:inst3|counter[9]              ; Merged with led_blink:inst1|counter[9]  ;
+; led_blink:inst4|counter[9]              ; Merged with led_blink:inst1|counter[9]  ;
+; led_blink:inst5|counter[9]              ; Merged with led_blink:inst1|counter[9]  ;
+; led_blink:inst6|counter[9]              ; Merged with led_blink:inst1|counter[9]  ;
+; led_blink:inst7|counter[9]              ; Merged with led_blink:inst1|counter[9]  ;
+; led_blink:inst8|counter[9]              ; Merged with led_blink:inst1|counter[9]  ;
+; led_blink:inst2|counter[8]              ; Merged with led_blink:inst1|counter[8]  ;
+; led_blink:inst3|counter[8]              ; Merged with led_blink:inst1|counter[8]  ;
+; led_blink:inst4|counter[8]              ; Merged with led_blink:inst1|counter[8]  ;
+; led_blink:inst5|counter[8]              ; Merged with led_blink:inst1|counter[8]  ;
+; led_blink:inst6|counter[8]              ; Merged with led_blink:inst1|counter[8]  ;
+; led_blink:inst7|counter[8]              ; Merged with led_blink:inst1|counter[8]  ;
+; led_blink:inst8|counter[8]              ; Merged with led_blink:inst1|counter[8]  ;
+; led_blink:inst2|counter[7]              ; Merged with led_blink:inst1|counter[7]  ;
+; led_blink:inst3|counter[7]              ; Merged with led_blink:inst1|counter[7]  ;
+; led_blink:inst4|counter[7]              ; Merged with led_blink:inst1|counter[7]  ;
+; led_blink:inst5|counter[7]              ; Merged with led_blink:inst1|counter[7]  ;
+; led_blink:inst6|counter[7]              ; Merged with led_blink:inst1|counter[7]  ;
+; led_blink:inst7|counter[7]              ; Merged with led_blink:inst1|counter[7]  ;
+; led_blink:inst8|counter[7]              ; Merged with led_blink:inst1|counter[7]  ;
+; led_blink:inst2|counter[6]              ; Merged with led_blink:inst1|counter[6]  ;
+; led_blink:inst3|counter[6]              ; Merged with led_blink:inst1|counter[6]  ;
+; led_blink:inst4|counter[6]              ; Merged with led_blink:inst1|counter[6]  ;
+; led_blink:inst5|counter[6]              ; Merged with led_blink:inst1|counter[6]  ;
+; led_blink:inst6|counter[6]              ; Merged with led_blink:inst1|counter[6]  ;
+; led_blink:inst7|counter[6]              ; Merged with led_blink:inst1|counter[6]  ;
+; led_blink:inst8|counter[6]              ; Merged with led_blink:inst1|counter[6]  ;
+; led_blink:inst2|counter[5]              ; Merged with led_blink:inst1|counter[5]  ;
+; led_blink:inst3|counter[5]              ; Merged with led_blink:inst1|counter[5]  ;
+; led_blink:inst4|counter[5]              ; Merged with led_blink:inst1|counter[5]  ;
+; led_blink:inst5|counter[5]              ; Merged with led_blink:inst1|counter[5]  ;
+; led_blink:inst6|counter[5]              ; Merged with led_blink:inst1|counter[5]  ;
+; led_blink:inst7|counter[5]              ; Merged with led_blink:inst1|counter[5]  ;
+; led_blink:inst8|counter[5]              ; Merged with led_blink:inst1|counter[5]  ;
+; led_blink:inst2|counter[4]              ; Merged with led_blink:inst1|counter[4]  ;
+; led_blink:inst3|counter[4]              ; Merged with led_blink:inst1|counter[4]  ;
+; led_blink:inst4|counter[4]              ; Merged with led_blink:inst1|counter[4]  ;
+; led_blink:inst5|counter[4]              ; Merged with led_blink:inst1|counter[4]  ;
+; led_blink:inst6|counter[4]              ; Merged with led_blink:inst1|counter[4]  ;
+; led_blink:inst7|counter[4]              ; Merged with led_blink:inst1|counter[4]  ;
+; led_blink:inst8|counter[4]              ; Merged with led_blink:inst1|counter[4]  ;
+; led_blink:inst2|counter[3]              ; Merged with led_blink:inst1|counter[3]  ;
+; led_blink:inst3|counter[3]              ; Merged with led_blink:inst1|counter[3]  ;
+; led_blink:inst4|counter[3]              ; Merged with led_blink:inst1|counter[3]  ;
+; led_blink:inst5|counter[3]              ; Merged with led_blink:inst1|counter[3]  ;
+; led_blink:inst6|counter[3]              ; Merged with led_blink:inst1|counter[3]  ;
+; led_blink:inst7|counter[3]              ; Merged with led_blink:inst1|counter[3]  ;
+; led_blink:inst8|counter[3]              ; Merged with led_blink:inst1|counter[3]  ;
+; led_blink:inst2|counter[2]              ; Merged with led_blink:inst1|counter[2]  ;
+; led_blink:inst3|counter[2]              ; Merged with led_blink:inst1|counter[2]  ;
+; led_blink:inst4|counter[2]              ; Merged with led_blink:inst1|counter[2]  ;
+; led_blink:inst5|counter[2]              ; Merged with led_blink:inst1|counter[2]  ;
+; led_blink:inst6|counter[2]              ; Merged with led_blink:inst1|counter[2]  ;
+; led_blink:inst7|counter[2]              ; Merged with led_blink:inst1|counter[2]  ;
+; led_blink:inst8|counter[2]              ; Merged with led_blink:inst1|counter[2]  ;
+; led_blink:inst2|counter[1]              ; Merged with led_blink:inst1|counter[1]  ;
+; led_blink:inst3|counter[1]              ; Merged with led_blink:inst1|counter[1]  ;
+; led_blink:inst4|counter[1]              ; Merged with led_blink:inst1|counter[1]  ;
+; led_blink:inst5|counter[1]              ; Merged with led_blink:inst1|counter[1]  ;
+; led_blink:inst6|counter[1]              ; Merged with led_blink:inst1|counter[1]  ;
+; led_blink:inst7|counter[1]              ; Merged with led_blink:inst1|counter[1]  ;
+; led_blink:inst8|counter[1]              ; Merged with led_blink:inst1|counter[1]  ;
+; led_blink:inst2|counter[0]              ; Merged with led_blink:inst1|counter[0]  ;
+; led_blink:inst3|counter[0]              ; Merged with led_blink:inst1|counter[0]  ;
+; led_blink:inst4|counter[0]              ; Merged with led_blink:inst1|counter[0]  ;
+; led_blink:inst5|counter[0]              ; Merged with led_blink:inst1|counter[0]  ;
+; led_blink:inst6|counter[0]              ; Merged with led_blink:inst1|counter[0]  ;
+; led_blink:inst7|counter[0]              ; Merged with led_blink:inst1|counter[0]  ;
+; led_blink:inst8|counter[0]              ; Merged with led_blink:inst1|counter[0]  ;
+; Total Number of Removed Registers = 231 ;                                         ;
++-----------------------------------------+-----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -215,20 +458,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Feb 06 00:05:05 2023
+    Info: Processing started: Mon Feb 06 17:07:23 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off blinkingLed -c blinkingLed
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file blinkingled.v
     Info (12023): Found entity 1: blinkingLed File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/dioneCPLD/blinkingLed/blinkingLed.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file led_blink.v
+    Info (12023): Found entity 1: led_blink File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/dioneCPLD/blinkingLed/led_blink.v Line: 1
 Info (12127): Elaborating entity "blinkingLed" for the top level hierarchy
-Info (21057): Implemented 44 device resources after synthesis - the final resource count might be different
+Info (12128): Elaborating entity "led_blink" for hierarchy "led_blink:inst1" File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/dioneCPLD/blinkingLed/blinkingLed.v Line: 2
+Info (21057): Implemented 52 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 42 logic cells
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 43 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4698 megabytes
-    Info: Processing ended: Mon Feb 06 00:05:11 2023
+    Info: Peak virtual memory: 4701 megabytes
+    Info: Processing ended: Mon Feb 06 17:07:29 2023
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:15
 

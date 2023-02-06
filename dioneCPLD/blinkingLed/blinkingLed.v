@@ -1,13 +1,10 @@
-module blinkingLed (input wire clk, output wire LED);
-	integer counter;
-	reg state;
-	
-	always @ (posedge clk) begin
-		counter <= counter + 1;
-		if(counter >= 240) begin
-			counter <= 0;
-			state <= !state;
-		end
-	end
-	assign LED = state;
+module blinkingLed (input wire clk, output wire [7:0] LED);
+	led_blink inst1 (.clk(clk), .LED(LED[0]));
+	led_blink inst2 (.clk(clk), .LED(LED[1]));
+	led_blink inst3 (.clk(clk), .LED(LED[2]));
+	led_blink inst4 (.clk(clk), .LED(LED[3]));
+	led_blink inst5 (.clk(clk), .LED(LED[4]));
+	led_blink inst6 (.clk(clk), .LED(LED[5]));
+	led_blink inst7 (.clk(clk), .LED(LED[6]));
+	led_blink inst8 (.clk(clk), .LED(LED[7]));
 endmodule 
