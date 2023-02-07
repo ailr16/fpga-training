@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/dioneCPLD/shift_register/shift_register4.v
+source_file = 1, C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/dioneCPLD/shift_register/db/shift_register.cbx.xml
+design_name = shift_register4
+instance = comp, \clk~I , clk, shift_register4, 1
+instance = comp, \bit_in~I , bit_in, shift_register4, 1
+instance = comp, \tmp[0] , tmp[0], shift_register4, 1
+instance = comp, \tmp[1] , tmp[1], shift_register4, 1
+instance = comp, \tmp[2] , tmp[2], shift_register4, 1
+instance = comp, \tmp[3] , tmp[3], shift_register4, 1
+instance = comp, \parallel_out[0]~I , parallel_out[0], shift_register4, 1
+instance = comp, \parallel_out[1]~I , parallel_out[1], shift_register4, 1
+instance = comp, \parallel_out[2]~I , parallel_out[2], shift_register4, 1
+instance = comp, \parallel_out[3]~I , parallel_out[3], shift_register4, 1
+instance = comp, \bit_out~I , bit_out, shift_register4, 1
