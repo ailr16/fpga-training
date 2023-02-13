@@ -1,0 +1,115 @@
+|display7_out
+x1 => x1.IN1
+x2 => x2.IN1
+x3 => x3.IN1
+x4 => x4.IN1
+clk => clk.IN1
+ya <= bcd_decoder:display1.ya
+yb <= bcd_decoder:display1.yb
+yc <= bcd_decoder:display1.yc
+yd <= bcd_decoder:display1.yd
+ye <= bcd_decoder:display1.ye
+yf <= bcd_decoder:display1.yf
+yg <= bcd_decoder:display1.yg
+yp <= bcd_decoder:display1.yp
+display_enable[0] <= shift_register4:enable_outputs.parallel_out
+display_enable[1] <= shift_register4:enable_outputs.parallel_out
+display_enable[2] <= shift_register4:enable_outputs.parallel_out
+display_enable[3] <= shift_register4:enable_outputs.parallel_out
+
+
+|display7_out|led_blink:clock_1khz
+clk => state.CLK
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
+clk => counter[9].CLK
+clk => counter[10].CLK
+clk => counter[11].CLK
+clk => counter[12].CLK
+clk => counter[13].CLK
+clk => counter[14].CLK
+clk => counter[15].CLK
+clk => counter[16].CLK
+clk => counter[17].CLK
+clk => counter[18].CLK
+clk => counter[19].CLK
+clk => counter[20].CLK
+clk => counter[21].CLK
+clk => counter[22].CLK
+clk => counter[23].CLK
+clk => counter[24].CLK
+clk => counter[25].CLK
+clk => counter[26].CLK
+clk => counter[27].CLK
+clk => counter[28].CLK
+clk => counter[29].CLK
+clk => counter[30].CLK
+clk => counter[31].CLK
+LED <= state.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|display7_out|shift_register4:enable_outputs
+clk => tmp[0].CLK
+clk => tmp[1].CLK
+clk => tmp[2].CLK
+clk => tmp[3].CLK
+bit_in => tmp[0].DATAIN
+parallel_out[0] <= tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[1] <= tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[2] <= tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[3] <= tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+bit_out <= tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|display7_out|bcd_decoder:display1
+A => ya.IN0
+A => yb.IN0
+A => yd.IN0
+A => ya.IN0
+A => yd.IN0
+A => yd.IN0
+A => ye.IN1
+A => yf.IN0
+B => ya.IN1
+B => yd.IN1
+B => ye.IN0
+B => yg.IN0
+B => ya.IN0
+B => yb.IN1
+B => yd.IN1
+B => yf.IN0
+C => ya.IN1
+C => yc.IN1
+C => yf.IN1
+C => yf.IN1
+C => yg.IN1
+C => ya.IN0
+C => ya.IN1
+C => yb.IN1
+C => yb.IN1
+C => yd.IN1
+C => yd.IN1
+C => ye.IN1
+D => ya.IN1
+D => yf.IN1
+D => yg.IN1
+D => ya.IN1
+D => ya.IN1
+D => yd.IN1
+ya <= ya.DB_MAX_OUTPUT_PORT_TYPE
+yb <= yb.DB_MAX_OUTPUT_PORT_TYPE
+yc <= yc.DB_MAX_OUTPUT_PORT_TYPE
+yd <= yd.DB_MAX_OUTPUT_PORT_TYPE
+ye <= ye.DB_MAX_OUTPUT_PORT_TYPE
+yf <= yf.DB_MAX_OUTPUT_PORT_TYPE
+yg <= yg.DB_MAX_OUTPUT_PORT_TYPE
+yp <= <VCC>
+
+

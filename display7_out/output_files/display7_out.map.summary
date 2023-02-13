@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Feb 11 22:28:21 2023
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : display7_out
+Top-level Entity Name : display7_out
+Family : Cyclone IV E
+Total logic elements : 55
+    Total combinational functions : 53
+    Dedicated logic registers : 37
+Total registers : 37
+Total pins : 17
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

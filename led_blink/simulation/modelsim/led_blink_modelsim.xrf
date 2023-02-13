@@ -1,6 +1,6 @@
 vendor_name = ModelSim
-source_file = 1, C:/Users/angel/OneDrive/Documentos/GitHub/fpgaPruebas/led_blink/led_blink.v
-source_file = 1, C:/Users/angel/OneDrive/Documentos/GitHub/fpgaPruebas/led_blink/db/led_blink.cbx.xml
+source_file = 1, C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/led_blink/led_blink.v
+source_file = 1, C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/led_blink/db/led_blink.cbx.xml
 design_name = led_blink
 instance = comp, \LED~output , LED~output, led_blink, 1
 instance = comp, \clk~input , clk~input, led_blink, 1

@@ -1,6 +1,6 @@
 Analysis & Synthesis report for bcd_decoder
-Sun Sep 04 22:13:30 2022
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Thu Feb 09 23:10:46 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -23,9 +23,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -35,23 +35,24 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Sep 04 22:13:30 2022       ;
-; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Thu Feb 09 23:10:46 2023       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; bcd_decoder                                 ;
 ; Top-level Entity Name              ; bcd_decoder                                 ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 8                                           ;
-;     Total combinational functions  ; 8                                           ;
+; Total logic elements               ; 7                                           ;
+;     Total combinational functions  ; 7                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 13                                          ;
+; Total pins                         ; 12                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -150,8 +151,8 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 2           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -161,13 +162,13 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                    ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
-; bcd_decoder.v                    ; yes             ; User Verilog HDL File  ; C:/Users/angel/OneDrive/Documentos/GitHub/fpgaPruebas/bcd_decoder/bcd_decoder.v ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                            ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
+; bcd_decoder.v                    ; yes             ; User Verilog HDL File  ; C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/bcd_decoder/bcd_decoder.v ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------+
@@ -175,30 +176,30 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------+
 ; Resource                                    ; Usage   ;
 +---------------------------------------------+---------+
-; Estimated Total logic elements              ; 8       ;
+; Estimated Total logic elements              ; 7       ;
 ;                                             ;         ;
-; Total combinational functions               ; 8       ;
+; Total combinational functions               ; 7       ;
 ; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 8       ;
+;     -- 4 input functions                    ; 7       ;
 ;     -- 3 input functions                    ; 0       ;
 ;     -- <=2 input functions                  ; 0       ;
 ;                                             ;         ;
 ; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 8       ;
+;     -- normal mode                          ; 7       ;
 ;     -- arithmetic mode                      ; 0       ;
 ;                                             ;         ;
 ; Total registers                             ; 0       ;
 ;     -- Dedicated logic registers            ; 0       ;
 ;     -- I/O registers                        ; 0       ;
 ;                                             ;         ;
-; I/O pins                                    ; 13      ;
+; I/O pins                                    ; 12      ;
 ;                                             ;         ;
 ; Embedded Multiplier 9-bit elements          ; 0       ;
 ;                                             ;         ;
 ; Maximum fan-out node                        ; B~input ;
-; Maximum fan-out                             ; 8       ;
-; Total fan-out                               ; 53      ;
-; Average fan-out                             ; 1.56    ;
+; Maximum fan-out                             ; 7       ;
+; Total fan-out                               ; 47      ;
+; Average fan-out                             ; 1.52    ;
 +---------------------------------------------+---------+
 
 
@@ -207,7 +208,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |bcd_decoder               ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |bcd_decoder        ; bcd_decoder ; work         ;
+; |bcd_decoder               ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |bcd_decoder        ; bcd_decoder ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -232,11 +233,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 13                          ;
-; cycloneiii_lcell_comb ; 9                           ;
-;     normal            ; 9                           ;
+; boundary_port         ; 12                          ;
+; cycloneiii_lcell_comb ; 8                           ;
+;     normal            ; 8                           ;
 ;         0 data inputs ; 1                           ;
-;         4 data inputs ; 8                           ;
+;         4 data inputs ; 7                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
 ; Average LUT depth     ; 0.92                        ;
@@ -248,7 +249,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -257,27 +258,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Sep 04 22:12:57 2022
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Feb 09 23:10:40 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off bcd_decoder -c bcd_decoder
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file bcd_decoder.v
-    Info (12023): Found entity 1: bcd_decoder File: C:/Users/angel/OneDrive/Documentos/GitHub/fpgaPruebas/bcd_decoder/bcd_decoder.v Line: 1
+    Info (12023): Found entity 1: bcd_decoder File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/bcd_decoder/bcd_decoder.v Line: 1
 Info (12127): Elaborating entity "bcd_decoder" for the top level hierarchy
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "yen" is stuck at GND File: C:/Users/angel/OneDrive/Documentos/GitHub/fpgaPruebas/bcd_decoder/bcd_decoder.v Line: 4
+    Warning (13410): Pin "yen" is stuck at GND File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/bcd_decoder/bcd_decoder.v Line: 4
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 21 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 19 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 8 logic cells
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 7 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4740 megabytes
-    Info: Processing ended: Sun Sep 04 22:13:30 2022
-    Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:00:52
+    Info: Peak virtual memory: 4735 megabytes
+    Info: Processing ended: Thu Feb 09 23:10:46 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:15
 
 

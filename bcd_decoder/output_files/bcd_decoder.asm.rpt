@@ -1,6 +1,6 @@
 Assembler report for bcd_decoder
-Sun Sep 04 22:13:43 2022
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Thu Feb 09 23:10:51 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -10,7 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/angel/OneDrive/Documentos/GitHub/fpgaPruebas/bcd_decoder/output_files/bcd_decoder.sof
+  5. Assembler Device Options: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/bcd_decoder/output_files/bcd_decoder.sof
   6. Assembler Messages
 
 
@@ -18,9 +18,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -30,14 +30,15 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Sep 04 22:13:43 2022 ;
+; Assembler Status      ; Successful - Thu Feb 09 23:10:51 2023 ;
 ; Revision Name         ; bcd_decoder                           ;
 ; Top-level Entity Name ; bcd_decoder                           ;
 ; Family                ; Cyclone IV E                          ;
@@ -52,23 +53,23 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                      ;
-+------------------------------------------------------------------------------------------------+
-; File Name                                                                                      ;
-+------------------------------------------------------------------------------------------------+
-; C:/Users/angel/OneDrive/Documentos/GitHub/fpgaPruebas/bcd_decoder/output_files/bcd_decoder.sof ;
-+------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                              ;
++------------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                              ;
++------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/bcd_decoder/output_files/bcd_decoder.sof ;
++------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/angel/OneDrive/Documentos/GitHub/fpgaPruebas/bcd_decoder/output_files/bcd_decoder.sof ;
-+----------------+---------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                 ;
-+----------------+---------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x000950CE                                                                                              ;
-; Checksum       ; 0x000950CE                                                                                              ;
-+----------------+---------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/bcd_decoder/output_files/bcd_decoder.sof ;
++----------------+---------------------------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                                         ;
++----------------+---------------------------------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x00094A31                                                                                                                      ;
+; Checksum       ; 0x00094A31                                                                                                                      ;
++----------------+---------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -76,16 +77,16 @@ refer to the applicable agreement for further details.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Sep 04 22:13:42 2022
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Feb 09 23:10:50 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off bcd_decoder -c bcd_decoder
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4663 megabytes
-    Info: Processing ended: Sun Sep 04 22:13:43 2022
+    Info: Peak virtual memory: 4680 megabytes
+    Info: Processing ended: Thu Feb 09 23:10:51 2023
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

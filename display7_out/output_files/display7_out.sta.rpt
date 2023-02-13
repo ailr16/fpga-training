@@ -1,0 +1,1353 @@
+Timing Analyzer report for display7_out
+Sat Feb 11 22:28:28 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk'
+ 13. Slow 1200mV 85C Model Setup: 'led_blink:clock_1khz|state'
+ 14. Slow 1200mV 85C Model Hold: 'led_blink:clock_1khz|state'
+ 15. Slow 1200mV 85C Model Hold: 'clk'
+ 16. Slow 1200mV 85C Model Metastability Summary
+ 17. Slow 1200mV 0C Model Fmax Summary
+ 18. Slow 1200mV 0C Model Setup Summary
+ 19. Slow 1200mV 0C Model Hold Summary
+ 20. Slow 1200mV 0C Model Recovery Summary
+ 21. Slow 1200mV 0C Model Removal Summary
+ 22. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 23. Slow 1200mV 0C Model Setup: 'clk'
+ 24. Slow 1200mV 0C Model Setup: 'led_blink:clock_1khz|state'
+ 25. Slow 1200mV 0C Model Hold: 'led_blink:clock_1khz|state'
+ 26. Slow 1200mV 0C Model Hold: 'clk'
+ 27. Slow 1200mV 0C Model Metastability Summary
+ 28. Fast 1200mV 0C Model Setup Summary
+ 29. Fast 1200mV 0C Model Hold Summary
+ 30. Fast 1200mV 0C Model Recovery Summary
+ 31. Fast 1200mV 0C Model Removal Summary
+ 32. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 33. Fast 1200mV 0C Model Setup: 'clk'
+ 34. Fast 1200mV 0C Model Setup: 'led_blink:clock_1khz|state'
+ 35. Fast 1200mV 0C Model Hold: 'led_blink:clock_1khz|state'
+ 36. Fast 1200mV 0C Model Hold: 'clk'
+ 37. Fast 1200mV 0C Model Metastability Summary
+ 38. Multicorner Timing Analysis Summary
+ 39. Board Trace Model Assignments
+ 40. Input Transition Times
+ 41. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 42. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 43. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 44. Setup Transfers
+ 45. Hold Transfers
+ 46. Report TCCS
+ 47. Report RSKM
+ 48. Unconstrained Paths Summary
+ 49. Clock Status Summary
+ 50. Unconstrained Input Ports
+ 51. Unconstrained Output Ports
+ 52. Unconstrained Input Ports
+ 53. Unconstrained Output Ports
+ 54. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; display7_out                                        ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE6E22C8                                         ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.4%      ;
+;     Processors 3-4         ;   0.3%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                 ;
++----------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------+
+; Clock Name                 ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                        ;
++----------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------+
+; clk                        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                        ;
+; led_blink:clock_1khz|state ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { led_blink:clock_1khz|state } ;
++----------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                         ;
++------------+-----------------+----------------------------+------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                 ; Note                                           ;
++------------+-----------------+----------------------------+------------------------------------------------+
+; 172.21 MHz ; 172.21 MHz      ; clk                        ;                                                ;
+; 996.02 MHz ; 402.09 MHz      ; led_blink:clock_1khz|state ; limit due to minimum period restriction (tmin) ;
++------------+-----------------+----------------------------+------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-----------------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary                 ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; clk                        ; -4.807 ; -126.069      ;
+; led_blink:clock_1khz|state ; -0.004 ; -0.006        ;
++----------------------------+--------+---------------+
+
+
++----------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary                 ;
++----------------------------+-------+---------------+
+; Clock                      ; Slack ; End Point TNS ;
++----------------------------+-------+---------------+
+; led_blink:clock_1khz|state ; 0.509 ; 0.000         ;
+; clk                        ; 0.717 ; 0.000         ;
++----------------------------+-------+---------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++-----------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary   ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; clk                        ; -3.000 ; -52.071       ;
+; led_blink:clock_1khz|state ; -1.487 ; -5.948        ;
++----------------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                                 ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; -4.807 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.083     ; 5.725      ;
+; -4.638 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.083     ; 5.556      ;
+; -4.503 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.083     ; 5.421      ;
+; -4.466 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.083     ; 5.384      ;
+; -4.399 ; led_blink:clock_1khz|counter[20] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.083     ; 5.317      ;
+; -4.366 ; led_blink:clock_1khz|counter[24] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.083     ; 5.284      ;
+; -4.333 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.082     ; 5.252      ;
+; -4.325 ; led_blink:clock_1khz|counter[18] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.083     ; 5.243      ;
+; -4.242 ; led_blink:clock_1khz|counter[30] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.083     ; 5.160      ;
+; -4.188 ; led_blink:clock_1khz|counter[6]  ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.082     ; 5.107      ;
+; -4.080 ; led_blink:clock_1khz|counter[13] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.082     ; 4.999      ;
+; -4.075 ; led_blink:clock_1khz|counter[26] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.083     ; 4.993      ;
+; -4.067 ; led_blink:clock_1khz|counter[4]  ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.082     ; 4.986      ;
+; -4.061 ; led_blink:clock_1khz|counter[3]  ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.082     ; 4.980      ;
+; -4.031 ; led_blink:clock_1khz|counter[27] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.083     ; 4.949      ;
+; -4.028 ; led_blink:clock_1khz|counter[29] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.083     ; 4.946      ;
+; -4.022 ; led_blink:clock_1khz|counter[14] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.082     ; 4.941      ;
+; -4.018 ; led_blink:clock_1khz|counter[5]  ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.082     ; 4.937      ;
+; -4.017 ; led_blink:clock_1khz|counter[21] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.083     ; 4.935      ;
+; -3.966 ; led_blink:clock_1khz|counter[12] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.082     ; 4.885      ;
+; -3.939 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[16] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.860      ;
+; -3.939 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[28] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.860      ;
+; -3.939 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[17] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.860      ;
+; -3.939 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[18] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.860      ;
+; -3.939 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[19] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.860      ;
+; -3.939 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[20] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.860      ;
+; -3.939 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[21] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.860      ;
+; -3.939 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[22] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.860      ;
+; -3.939 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[23] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.860      ;
+; -3.939 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[24] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.860      ;
+; -3.939 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[25] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.860      ;
+; -3.939 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[26] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.860      ;
+; -3.939 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[27] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.860      ;
+; -3.939 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[30] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.860      ;
+; -3.939 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[29] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.860      ;
+; -3.939 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[31] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.860      ;
+; -3.831 ; led_blink:clock_1khz|counter[25] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.083     ; 4.749      ;
+; -3.823 ; led_blink:clock_1khz|counter[7]  ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.082     ; 4.742      ;
+; -3.806 ; led_blink:clock_1khz|counter[9]  ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.082     ; 4.725      ;
+; -3.770 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[16] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.691      ;
+; -3.770 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[28] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.691      ;
+; -3.770 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[17] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.691      ;
+; -3.770 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[18] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.691      ;
+; -3.770 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[19] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.691      ;
+; -3.770 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[20] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.691      ;
+; -3.770 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[21] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.691      ;
+; -3.770 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[22] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.691      ;
+; -3.770 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[23] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.691      ;
+; -3.770 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[24] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.691      ;
+; -3.770 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[25] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.691      ;
+; -3.770 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[26] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.691      ;
+; -3.770 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[27] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.691      ;
+; -3.770 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[30] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.691      ;
+; -3.770 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[29] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.691      ;
+; -3.770 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[31] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.691      ;
+; -3.714 ; led_blink:clock_1khz|counter[28] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.083     ; 4.632      ;
+; -3.699 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[12] ; clk          ; clk         ; 1.000        ; -0.082     ; 4.618      ;
+; -3.699 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[10] ; clk          ; clk         ; 1.000        ; -0.082     ; 4.618      ;
+; -3.699 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[2]  ; clk          ; clk         ; 1.000        ; -0.082     ; 4.618      ;
+; -3.699 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[3]  ; clk          ; clk         ; 1.000        ; -0.082     ; 4.618      ;
+; -3.699 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[4]  ; clk          ; clk         ; 1.000        ; -0.082     ; 4.618      ;
+; -3.699 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[5]  ; clk          ; clk         ; 1.000        ; -0.082     ; 4.618      ;
+; -3.699 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[6]  ; clk          ; clk         ; 1.000        ; -0.082     ; 4.618      ;
+; -3.699 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[7]  ; clk          ; clk         ; 1.000        ; -0.082     ; 4.618      ;
+; -3.699 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[8]  ; clk          ; clk         ; 1.000        ; -0.082     ; 4.618      ;
+; -3.699 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[9]  ; clk          ; clk         ; 1.000        ; -0.082     ; 4.618      ;
+; -3.699 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[13] ; clk          ; clk         ; 1.000        ; -0.082     ; 4.618      ;
+; -3.699 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[11] ; clk          ; clk         ; 1.000        ; -0.082     ; 4.618      ;
+; -3.699 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[14] ; clk          ; clk         ; 1.000        ; -0.082     ; 4.618      ;
+; -3.699 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[15] ; clk          ; clk         ; 1.000        ; -0.082     ; 4.618      ;
+; -3.642 ; led_blink:clock_1khz|counter[8]  ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.082     ; 4.561      ;
+; -3.639 ; led_blink:clock_1khz|counter[31] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.083     ; 4.557      ;
+; -3.635 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[16] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.556      ;
+; -3.635 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[28] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.556      ;
+; -3.635 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[17] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.556      ;
+; -3.635 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[18] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.556      ;
+; -3.635 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[19] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.556      ;
+; -3.635 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[20] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.556      ;
+; -3.635 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[21] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.556      ;
+; -3.635 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[22] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.556      ;
+; -3.635 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[23] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.556      ;
+; -3.635 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[24] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.556      ;
+; -3.635 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[25] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.556      ;
+; -3.635 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[26] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.556      ;
+; -3.635 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[27] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.556      ;
+; -3.635 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[30] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.556      ;
+; -3.635 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[29] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.556      ;
+; -3.635 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[31] ; clk          ; clk         ; 1.000        ; -0.080     ; 4.556      ;
+; -3.599 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[16] ; clk          ; clk         ; 1.000        ; -0.079     ; 4.521      ;
+; -3.599 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[28] ; clk          ; clk         ; 1.000        ; -0.079     ; 4.521      ;
+; -3.599 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[17] ; clk          ; clk         ; 1.000        ; -0.079     ; 4.521      ;
+; -3.599 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[18] ; clk          ; clk         ; 1.000        ; -0.079     ; 4.521      ;
+; -3.599 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[19] ; clk          ; clk         ; 1.000        ; -0.079     ; 4.521      ;
+; -3.599 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[20] ; clk          ; clk         ; 1.000        ; -0.079     ; 4.521      ;
+; -3.599 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[21] ; clk          ; clk         ; 1.000        ; -0.079     ; 4.521      ;
+; -3.599 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[22] ; clk          ; clk         ; 1.000        ; -0.079     ; 4.521      ;
+; -3.599 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[23] ; clk          ; clk         ; 1.000        ; -0.079     ; 4.521      ;
+; -3.599 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[24] ; clk          ; clk         ; 1.000        ; -0.079     ; 4.521      ;
+; -3.599 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[25] ; clk          ; clk         ; 1.000        ; -0.079     ; 4.521      ;
+; -3.599 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[26] ; clk          ; clk         ; 1.000        ; -0.079     ; 4.521      ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'led_blink:clock_1khz|state'                                                                                                                                 ;
++--------+---------------------------------------+---------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; Slack  ; From Node                             ; To Node                               ; Launch Clock               ; Latch Clock                ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------+---------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; -0.004 ; shift_register4:enable_outputs|tmp[0] ; shift_register4:enable_outputs|tmp[1] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 1.000        ; -0.082     ; 0.923      ;
+; -0.002 ; shift_register4:enable_outputs|tmp[3] ; shift_register4:enable_outputs|tmp[0] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 1.000        ; -0.082     ; 0.921      ;
+; 0.010  ; shift_register4:enable_outputs|tmp[2] ; shift_register4:enable_outputs|tmp[3] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 1.000        ; -0.082     ; 0.909      ;
+; 0.012  ; shift_register4:enable_outputs|tmp[1] ; shift_register4:enable_outputs|tmp[2] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 1.000        ; -0.082     ; 0.907      ;
++--------+---------------------------------------+---------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'led_blink:clock_1khz|state'                                                                                                                                 ;
++-------+---------------------------------------+---------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                               ; Launch Clock               ; Latch Clock                ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+---------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; 0.509 ; shift_register4:enable_outputs|tmp[3] ; shift_register4:enable_outputs|tmp[0] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 0.000        ; 0.082      ; 0.803      ;
+; 0.510 ; shift_register4:enable_outputs|tmp[0] ; shift_register4:enable_outputs|tmp[1] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 0.000        ; 0.082      ; 0.804      ;
+; 0.525 ; shift_register4:enable_outputs|tmp[1] ; shift_register4:enable_outputs|tmp[2] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 0.000        ; 0.082      ; 0.819      ;
+; 0.526 ; shift_register4:enable_outputs|tmp[2] ; shift_register4:enable_outputs|tmp[3] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 0.000        ; 0.082      ; 0.820      ;
++-------+---------------------------------------+---------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                                               ;
++-------+----------------------------------+----------------------------------+----------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                          ; Launch Clock               ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+----------------------------------+----------------------------+-------------+--------------+------------+------------+
+; 0.717 ; led_blink:clock_1khz|counter[1]  ; led_blink:clock_1khz|counter[1]  ; clk                        ; clk         ; 0.000        ; 0.100      ; 1.029      ;
+; 0.738 ; led_blink:clock_1khz|counter[2]  ; led_blink:clock_1khz|counter[2]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.031      ;
+; 0.742 ; led_blink:clock_1khz|counter[0]  ; led_blink:clock_1khz|counter[0]  ; clk                        ; clk         ; 0.000        ; 0.100      ; 1.054      ;
+; 0.760 ; led_blink:clock_1khz|counter[3]  ; led_blink:clock_1khz|counter[3]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.053      ;
+; 0.760 ; led_blink:clock_1khz|counter[15] ; led_blink:clock_1khz|counter[15] ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.053      ;
+; 0.761 ; led_blink:clock_1khz|counter[5]  ; led_blink:clock_1khz|counter[5]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.054      ;
+; 0.761 ; led_blink:clock_1khz|counter[13] ; led_blink:clock_1khz|counter[13] ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.054      ;
+; 0.761 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[11] ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.054      ;
+; 0.762 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[19] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.054      ;
+; 0.763 ; led_blink:clock_1khz|counter[6]  ; led_blink:clock_1khz|counter[6]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; led_blink:clock_1khz|counter[7]  ; led_blink:clock_1khz|counter[7]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; led_blink:clock_1khz|counter[9]  ; led_blink:clock_1khz|counter[9]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[17] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.055      ;
+; 0.763 ; led_blink:clock_1khz|counter[21] ; led_blink:clock_1khz|counter[21] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.055      ;
+; 0.763 ; led_blink:clock_1khz|counter[27] ; led_blink:clock_1khz|counter[27] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.055      ;
+; 0.763 ; led_blink:clock_1khz|counter[29] ; led_blink:clock_1khz|counter[29] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.055      ;
+; 0.764 ; led_blink:clock_1khz|counter[12] ; led_blink:clock_1khz|counter[12] ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; led_blink:clock_1khz|counter[4]  ; led_blink:clock_1khz|counter[4]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; led_blink:clock_1khz|counter[14] ; led_blink:clock_1khz|counter[14] ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; led_blink:clock_1khz|counter[16] ; led_blink:clock_1khz|counter[16] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.056      ;
+; 0.764 ; led_blink:clock_1khz|counter[31] ; led_blink:clock_1khz|counter[31] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.056      ;
+; 0.765 ; led_blink:clock_1khz|counter[10] ; led_blink:clock_1khz|counter[10] ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.058      ;
+; 0.765 ; led_blink:clock_1khz|counter[8]  ; led_blink:clock_1khz|counter[8]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.058      ;
+; 0.765 ; led_blink:clock_1khz|counter[18] ; led_blink:clock_1khz|counter[18] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.765 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[22] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.765 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[23] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.765 ; led_blink:clock_1khz|counter[25] ; led_blink:clock_1khz|counter[25] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.057      ;
+; 0.766 ; led_blink:clock_1khz|counter[20] ; led_blink:clock_1khz|counter[20] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.058      ;
+; 0.766 ; led_blink:clock_1khz|counter[30] ; led_blink:clock_1khz|counter[30] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.058      ;
+; 0.767 ; led_blink:clock_1khz|counter[28] ; led_blink:clock_1khz|counter[28] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.059      ;
+; 0.767 ; led_blink:clock_1khz|counter[24] ; led_blink:clock_1khz|counter[24] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.059      ;
+; 0.767 ; led_blink:clock_1khz|counter[26] ; led_blink:clock_1khz|counter[26] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.059      ;
+; 1.001 ; led_blink:clock_1khz|state       ; led_blink:clock_1khz|state       ; led_blink:clock_1khz|state ; clk         ; 0.000        ; 2.587      ; 4.091      ;
+; 1.080 ; led_blink:clock_1khz|counter[0]  ; led_blink:clock_1khz|counter[1]  ; clk                        ; clk         ; 0.000        ; 0.100      ; 1.392      ;
+; 1.099 ; led_blink:clock_1khz|counter[2]  ; led_blink:clock_1khz|counter[3]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.392      ;
+; 1.108 ; led_blink:clock_1khz|counter[2]  ; led_blink:clock_1khz|counter[4]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.401      ;
+; 1.114 ; led_blink:clock_1khz|counter[15] ; led_blink:clock_1khz|counter[16] ; clk                        ; clk         ; 0.000        ; 0.082      ; 1.408      ;
+; 1.115 ; led_blink:clock_1khz|counter[3]  ; led_blink:clock_1khz|counter[4]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.408      ;
+; 1.116 ; led_blink:clock_1khz|counter[5]  ; led_blink:clock_1khz|counter[6]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.409      ;
+; 1.116 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[12] ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.409      ;
+; 1.116 ; led_blink:clock_1khz|counter[13] ; led_blink:clock_1khz|counter[14] ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.409      ;
+; 1.117 ; led_blink:clock_1khz|counter[9]  ; led_blink:clock_1khz|counter[10] ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.410      ;
+; 1.117 ; led_blink:clock_1khz|counter[7]  ; led_blink:clock_1khz|counter[8]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.410      ;
+; 1.117 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[18] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.409      ;
+; 1.117 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[20] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.409      ;
+; 1.118 ; led_blink:clock_1khz|counter[21] ; led_blink:clock_1khz|counter[22] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.410      ;
+; 1.118 ; led_blink:clock_1khz|counter[29] ; led_blink:clock_1khz|counter[30] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.410      ;
+; 1.118 ; led_blink:clock_1khz|counter[27] ; led_blink:clock_1khz|counter[28] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.410      ;
+; 1.119 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[24] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.411      ;
+; 1.119 ; led_blink:clock_1khz|counter[25] ; led_blink:clock_1khz|counter[26] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.411      ;
+; 1.124 ; led_blink:clock_1khz|counter[6]  ; led_blink:clock_1khz|counter[7]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.417      ;
+; 1.125 ; led_blink:clock_1khz|counter[14] ; led_blink:clock_1khz|counter[15] ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.418      ;
+; 1.125 ; led_blink:clock_1khz|counter[4]  ; led_blink:clock_1khz|counter[5]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.418      ;
+; 1.125 ; led_blink:clock_1khz|counter[12] ; led_blink:clock_1khz|counter[13] ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.418      ;
+; 1.125 ; led_blink:clock_1khz|counter[16] ; led_blink:clock_1khz|counter[17] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.417      ;
+; 1.126 ; led_blink:clock_1khz|counter[10] ; led_blink:clock_1khz|counter[11] ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.419      ;
+; 1.126 ; led_blink:clock_1khz|counter[18] ; led_blink:clock_1khz|counter[19] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.418      ;
+; 1.126 ; led_blink:clock_1khz|counter[8]  ; led_blink:clock_1khz|counter[9]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.419      ;
+; 1.126 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[23] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.418      ;
+; 1.127 ; led_blink:clock_1khz|counter[20] ; led_blink:clock_1khz|counter[21] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.419      ;
+; 1.127 ; led_blink:clock_1khz|counter[30] ; led_blink:clock_1khz|counter[31] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.419      ;
+; 1.128 ; led_blink:clock_1khz|counter[26] ; led_blink:clock_1khz|counter[27] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.420      ;
+; 1.128 ; led_blink:clock_1khz|counter[28] ; led_blink:clock_1khz|counter[29] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.420      ;
+; 1.128 ; led_blink:clock_1khz|counter[24] ; led_blink:clock_1khz|counter[25] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.420      ;
+; 1.133 ; led_blink:clock_1khz|counter[14] ; led_blink:clock_1khz|counter[16] ; clk                        ; clk         ; 0.000        ; 0.082      ; 1.427      ;
+; 1.133 ; led_blink:clock_1khz|counter[6]  ; led_blink:clock_1khz|counter[8]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.426      ;
+; 1.134 ; led_blink:clock_1khz|counter[4]  ; led_blink:clock_1khz|counter[6]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.427      ;
+; 1.134 ; led_blink:clock_1khz|counter[12] ; led_blink:clock_1khz|counter[14] ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.427      ;
+; 1.134 ; led_blink:clock_1khz|counter[16] ; led_blink:clock_1khz|counter[18] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.426      ;
+; 1.135 ; led_blink:clock_1khz|counter[10] ; led_blink:clock_1khz|counter[12] ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.428      ;
+; 1.135 ; led_blink:clock_1khz|counter[8]  ; led_blink:clock_1khz|counter[10] ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.428      ;
+; 1.135 ; led_blink:clock_1khz|counter[18] ; led_blink:clock_1khz|counter[20] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.427      ;
+; 1.135 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[24] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.427      ;
+; 1.136 ; led_blink:clock_1khz|counter[20] ; led_blink:clock_1khz|counter[22] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.428      ;
+; 1.137 ; led_blink:clock_1khz|counter[28] ; led_blink:clock_1khz|counter[30] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.429      ;
+; 1.137 ; led_blink:clock_1khz|counter[26] ; led_blink:clock_1khz|counter[28] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.429      ;
+; 1.137 ; led_blink:clock_1khz|counter[24] ; led_blink:clock_1khz|counter[26] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.429      ;
+; 1.239 ; led_blink:clock_1khz|counter[2]  ; led_blink:clock_1khz|counter[5]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.532      ;
+; 1.245 ; led_blink:clock_1khz|counter[15] ; led_blink:clock_1khz|counter[17] ; clk                        ; clk         ; 0.000        ; 0.082      ; 1.539      ;
+; 1.246 ; led_blink:clock_1khz|counter[3]  ; led_blink:clock_1khz|counter[5]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.539      ;
+; 1.247 ; led_blink:clock_1khz|counter[5]  ; led_blink:clock_1khz|counter[7]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.540      ;
+; 1.247 ; led_blink:clock_1khz|counter[13] ; led_blink:clock_1khz|counter[15] ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.540      ;
+; 1.247 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[13] ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.540      ;
+; 1.248 ; led_blink:clock_1khz|counter[9]  ; led_blink:clock_1khz|counter[11] ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.541      ;
+; 1.248 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[19] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.540      ;
+; 1.248 ; led_blink:clock_1khz|counter[7]  ; led_blink:clock_1khz|counter[9]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.541      ;
+; 1.248 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[21] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.540      ;
+; 1.248 ; led_blink:clock_1khz|counter[2]  ; led_blink:clock_1khz|counter[6]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.541      ;
+; 1.249 ; led_blink:clock_1khz|counter[21] ; led_blink:clock_1khz|counter[23] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.541      ;
+; 1.249 ; led_blink:clock_1khz|counter[29] ; led_blink:clock_1khz|counter[31] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.541      ;
+; 1.249 ; led_blink:clock_1khz|counter[27] ; led_blink:clock_1khz|counter[29] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.541      ;
+; 1.250 ; led_blink:clock_1khz|counter[25] ; led_blink:clock_1khz|counter[27] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.542      ;
+; 1.250 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[25] ; clk                        ; clk         ; 0.000        ; 0.080      ; 1.542      ;
+; 1.254 ; led_blink:clock_1khz|counter[15] ; led_blink:clock_1khz|counter[18] ; clk                        ; clk         ; 0.000        ; 0.082      ; 1.548      ;
+; 1.255 ; led_blink:clock_1khz|counter[13] ; led_blink:clock_1khz|counter[16] ; clk                        ; clk         ; 0.000        ; 0.082      ; 1.549      ;
+; 1.255 ; led_blink:clock_1khz|counter[3]  ; led_blink:clock_1khz|counter[6]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.548      ;
+; 1.256 ; led_blink:clock_1khz|counter[5]  ; led_blink:clock_1khz|counter[8]  ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.549      ;
+; 1.256 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[14] ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.549      ;
+; 1.257 ; led_blink:clock_1khz|counter[9]  ; led_blink:clock_1khz|counter[12] ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.550      ;
+; 1.257 ; led_blink:clock_1khz|counter[7]  ; led_blink:clock_1khz|counter[10] ; clk                        ; clk         ; 0.000        ; 0.081      ; 1.550      ;
++-------+----------------------------------+----------------------------------+----------------------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                          ;
++------------+-----------------+----------------------------+------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                 ; Note                                           ;
++------------+-----------------+----------------------------+------------------------------------------------+
+; 183.22 MHz ; 183.22 MHz      ; clk                        ;                                                ;
+; 1098.9 MHz ; 402.09 MHz      ; led_blink:clock_1khz|state ; limit due to minimum period restriction (tmin) ;
++------------+-----------------+----------------------------+------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary                  ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; clk                        ; -4.458 ; -116.288      ;
+; led_blink:clock_1khz|state ; 0.090  ; 0.000         ;
++----------------------------+--------+---------------+
+
+
++----------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                  ;
++----------------------------+-------+---------------+
+; Clock                      ; Slack ; End Point TNS ;
++----------------------------+-------+---------------+
+; led_blink:clock_1khz|state ; 0.469 ; 0.000         ;
+; clk                        ; 0.667 ; 0.000         ;
++----------------------------+-------+---------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++-----------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary    ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; clk                        ; -3.000 ; -52.071       ;
+; led_blink:clock_1khz|state ; -1.487 ; -5.948        ;
++----------------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                                  ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; -4.458 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.072     ; 5.388      ;
+; -4.293 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.072     ; 5.223      ;
+; -4.172 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.072     ; 5.102      ;
+; -4.131 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.072     ; 5.061      ;
+; -4.073 ; led_blink:clock_1khz|counter[20] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.072     ; 5.003      ;
+; -4.031 ; led_blink:clock_1khz|counter[24] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.072     ; 4.961      ;
+; -4.017 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.071     ; 4.948      ;
+; -4.002 ; led_blink:clock_1khz|counter[18] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.072     ; 4.932      ;
+; -3.935 ; led_blink:clock_1khz|counter[30] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.072     ; 4.865      ;
+; -3.862 ; led_blink:clock_1khz|counter[6]  ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.071     ; 4.793      ;
+; -3.779 ; led_blink:clock_1khz|counter[26] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.072     ; 4.709      ;
+; -3.773 ; led_blink:clock_1khz|counter[13] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.071     ; 4.704      ;
+; -3.758 ; led_blink:clock_1khz|counter[4]  ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.071     ; 4.689      ;
+; -3.754 ; led_blink:clock_1khz|counter[3]  ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.071     ; 4.685      ;
+; -3.732 ; led_blink:clock_1khz|counter[27] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.072     ; 4.662      ;
+; -3.730 ; led_blink:clock_1khz|counter[29] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.072     ; 4.660      ;
+; -3.721 ; led_blink:clock_1khz|counter[14] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.071     ; 4.652      ;
+; -3.716 ; led_blink:clock_1khz|counter[5]  ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.071     ; 4.647      ;
+; -3.710 ; led_blink:clock_1khz|counter[21] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.072     ; 4.640      ;
+; -3.668 ; led_blink:clock_1khz|counter[12] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.071     ; 4.599      ;
+; -3.645 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[16] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.575      ;
+; -3.645 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[28] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.575      ;
+; -3.645 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[17] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.575      ;
+; -3.645 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[18] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.575      ;
+; -3.645 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[19] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.575      ;
+; -3.645 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[20] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.575      ;
+; -3.645 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[21] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.575      ;
+; -3.645 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[22] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.575      ;
+; -3.645 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[23] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.575      ;
+; -3.645 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[24] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.575      ;
+; -3.645 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[25] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.575      ;
+; -3.645 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[26] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.575      ;
+; -3.645 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[27] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.575      ;
+; -3.645 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[30] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.575      ;
+; -3.645 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[29] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.575      ;
+; -3.645 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[31] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.575      ;
+; -3.548 ; led_blink:clock_1khz|counter[25] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.072     ; 4.478      ;
+; -3.525 ; led_blink:clock_1khz|counter[7]  ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.071     ; 4.456      ;
+; -3.513 ; led_blink:clock_1khz|counter[9]  ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.071     ; 4.444      ;
+; -3.480 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[16] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.410      ;
+; -3.480 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[28] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.410      ;
+; -3.480 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[17] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.410      ;
+; -3.480 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[18] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.410      ;
+; -3.480 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[19] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.410      ;
+; -3.480 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[20] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.410      ;
+; -3.480 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[21] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.410      ;
+; -3.480 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[22] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.410      ;
+; -3.480 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[23] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.410      ;
+; -3.480 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[24] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.410      ;
+; -3.480 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[25] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.410      ;
+; -3.480 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[26] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.410      ;
+; -3.480 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[27] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.410      ;
+; -3.480 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[30] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.410      ;
+; -3.480 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[29] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.410      ;
+; -3.480 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[31] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.410      ;
+; -3.435 ; led_blink:clock_1khz|counter[28] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.072     ; 4.365      ;
+; -3.432 ; led_blink:clock_1khz|counter[31] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.072     ; 4.362      ;
+; -3.400 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[12] ; clk          ; clk         ; 1.000        ; -0.073     ; 4.329      ;
+; -3.400 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[10] ; clk          ; clk         ; 1.000        ; -0.073     ; 4.329      ;
+; -3.400 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[2]  ; clk          ; clk         ; 1.000        ; -0.073     ; 4.329      ;
+; -3.400 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[3]  ; clk          ; clk         ; 1.000        ; -0.073     ; 4.329      ;
+; -3.400 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[4]  ; clk          ; clk         ; 1.000        ; -0.073     ; 4.329      ;
+; -3.400 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[5]  ; clk          ; clk         ; 1.000        ; -0.073     ; 4.329      ;
+; -3.400 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[6]  ; clk          ; clk         ; 1.000        ; -0.073     ; 4.329      ;
+; -3.400 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[7]  ; clk          ; clk         ; 1.000        ; -0.073     ; 4.329      ;
+; -3.400 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[8]  ; clk          ; clk         ; 1.000        ; -0.073     ; 4.329      ;
+; -3.400 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[9]  ; clk          ; clk         ; 1.000        ; -0.073     ; 4.329      ;
+; -3.400 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[13] ; clk          ; clk         ; 1.000        ; -0.073     ; 4.329      ;
+; -3.400 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[11] ; clk          ; clk         ; 1.000        ; -0.073     ; 4.329      ;
+; -3.400 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[14] ; clk          ; clk         ; 1.000        ; -0.073     ; 4.329      ;
+; -3.400 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[15] ; clk          ; clk         ; 1.000        ; -0.073     ; 4.329      ;
+; -3.371 ; led_blink:clock_1khz|counter[8]  ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.071     ; 4.302      ;
+; -3.359 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[16] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.289      ;
+; -3.359 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[28] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.289      ;
+; -3.359 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[17] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.289      ;
+; -3.359 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[18] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.289      ;
+; -3.359 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[19] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.289      ;
+; -3.359 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[20] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.289      ;
+; -3.359 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[21] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.289      ;
+; -3.359 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[22] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.289      ;
+; -3.359 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[23] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.289      ;
+; -3.359 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[24] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.289      ;
+; -3.359 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[25] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.289      ;
+; -3.359 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[26] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.289      ;
+; -3.359 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[27] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.289      ;
+; -3.359 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[30] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.289      ;
+; -3.359 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[29] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.289      ;
+; -3.359 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[31] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.289      ;
+; -3.318 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[16] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.248      ;
+; -3.318 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[28] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.248      ;
+; -3.318 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[17] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.248      ;
+; -3.318 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[18] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.248      ;
+; -3.318 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[19] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.248      ;
+; -3.318 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[20] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.248      ;
+; -3.318 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[21] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.248      ;
+; -3.318 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[22] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.248      ;
+; -3.318 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[23] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.248      ;
+; -3.318 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[24] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.248      ;
+; -3.318 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[25] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.248      ;
+; -3.318 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[26] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.248      ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'led_blink:clock_1khz|state'                                                                                                                                 ;
++-------+---------------------------------------+---------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                               ; Launch Clock               ; Latch Clock                ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+---------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; 0.090 ; shift_register4:enable_outputs|tmp[0] ; shift_register4:enable_outputs|tmp[1] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 1.000        ; -0.073     ; 0.839      ;
+; 0.092 ; shift_register4:enable_outputs|tmp[3] ; shift_register4:enable_outputs|tmp[0] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 1.000        ; -0.073     ; 0.837      ;
+; 0.110 ; shift_register4:enable_outputs|tmp[2] ; shift_register4:enable_outputs|tmp[3] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 1.000        ; -0.073     ; 0.819      ;
+; 0.112 ; shift_register4:enable_outputs|tmp[1] ; shift_register4:enable_outputs|tmp[2] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 1.000        ; -0.073     ; 0.817      ;
++-------+---------------------------------------+---------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'led_blink:clock_1khz|state'                                                                                                                                  ;
++-------+---------------------------------------+---------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                               ; Launch Clock               ; Latch Clock                ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+---------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; 0.469 ; shift_register4:enable_outputs|tmp[3] ; shift_register4:enable_outputs|tmp[0] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 0.000        ; 0.073      ; 0.737      ;
+; 0.471 ; shift_register4:enable_outputs|tmp[0] ; shift_register4:enable_outputs|tmp[1] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 0.000        ; 0.073      ; 0.739      ;
+; 0.491 ; shift_register4:enable_outputs|tmp[1] ; shift_register4:enable_outputs|tmp[2] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 0.000        ; 0.073      ; 0.759      ;
+; 0.492 ; shift_register4:enable_outputs|tmp[2] ; shift_register4:enable_outputs|tmp[3] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 0.000        ; 0.073      ; 0.760      ;
++-------+---------------------------------------+---------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                                                ;
++-------+----------------------------------+----------------------------------+----------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                          ; Launch Clock               ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+----------------------------------+----------------------------+-------------+--------------+------------+------------+
+; 0.667 ; led_blink:clock_1khz|counter[1]  ; led_blink:clock_1khz|counter[1]  ; clk                        ; clk         ; 0.000        ; 0.090      ; 0.952      ;
+; 0.689 ; led_blink:clock_1khz|counter[2]  ; led_blink:clock_1khz|counter[2]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.956      ;
+; 0.694 ; led_blink:clock_1khz|counter[0]  ; led_blink:clock_1khz|counter[0]  ; clk                        ; clk         ; 0.000        ; 0.090      ; 0.979      ;
+; 0.705 ; led_blink:clock_1khz|counter[3]  ; led_blink:clock_1khz|counter[3]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.972      ;
+; 0.705 ; led_blink:clock_1khz|counter[5]  ; led_blink:clock_1khz|counter[5]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.972      ;
+; 0.705 ; led_blink:clock_1khz|counter[13] ; led_blink:clock_1khz|counter[13] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.972      ;
+; 0.705 ; led_blink:clock_1khz|counter[15] ; led_blink:clock_1khz|counter[15] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.972      ;
+; 0.706 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[11] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[19] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; led_blink:clock_1khz|counter[21] ; led_blink:clock_1khz|counter[21] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; led_blink:clock_1khz|counter[29] ; led_blink:clock_1khz|counter[29] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.707 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[17] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; led_blink:clock_1khz|counter[27] ; led_blink:clock_1khz|counter[27] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.708 ; led_blink:clock_1khz|counter[6]  ; led_blink:clock_1khz|counter[6]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; led_blink:clock_1khz|counter[9]  ; led_blink:clock_1khz|counter[9]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[22] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; led_blink:clock_1khz|counter[31] ; led_blink:clock_1khz|counter[31] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.709 ; led_blink:clock_1khz|counter[7]  ; led_blink:clock_1khz|counter[7]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.976      ;
+; 0.709 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[23] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.976      ;
+; 0.709 ; led_blink:clock_1khz|counter[25] ; led_blink:clock_1khz|counter[25] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.976      ;
+; 0.710 ; led_blink:clock_1khz|counter[14] ; led_blink:clock_1khz|counter[14] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.977      ;
+; 0.710 ; led_blink:clock_1khz|counter[16] ; led_blink:clock_1khz|counter[16] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.977      ;
+; 0.711 ; led_blink:clock_1khz|counter[12] ; led_blink:clock_1khz|counter[12] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.711 ; led_blink:clock_1khz|counter[10] ; led_blink:clock_1khz|counter[10] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.711 ; led_blink:clock_1khz|counter[4]  ; led_blink:clock_1khz|counter[4]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.711 ; led_blink:clock_1khz|counter[18] ; led_blink:clock_1khz|counter[18] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.712 ; led_blink:clock_1khz|counter[8]  ; led_blink:clock_1khz|counter[8]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.712 ; led_blink:clock_1khz|counter[28] ; led_blink:clock_1khz|counter[28] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.712 ; led_blink:clock_1khz|counter[20] ; led_blink:clock_1khz|counter[20] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.712 ; led_blink:clock_1khz|counter[26] ; led_blink:clock_1khz|counter[26] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.712 ; led_blink:clock_1khz|counter[30] ; led_blink:clock_1khz|counter[30] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.713 ; led_blink:clock_1khz|counter[24] ; led_blink:clock_1khz|counter[24] ; clk                        ; clk         ; 0.000        ; 0.072      ; 0.980      ;
+; 0.945 ; led_blink:clock_1khz|state       ; led_blink:clock_1khz|state       ; led_blink:clock_1khz|state ; clk         ; 0.000        ; 2.378      ; 3.788      ;
+; 0.987 ; led_blink:clock_1khz|counter[0]  ; led_blink:clock_1khz|counter[1]  ; clk                        ; clk         ; 0.000        ; 0.090      ; 1.272      ;
+; 1.006 ; led_blink:clock_1khz|counter[2]  ; led_blink:clock_1khz|counter[3]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.273      ;
+; 1.023 ; led_blink:clock_1khz|counter[2]  ; led_blink:clock_1khz|counter[4]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.290      ;
+; 1.026 ; led_blink:clock_1khz|counter[15] ; led_blink:clock_1khz|counter[16] ; clk                        ; clk         ; 0.000        ; 0.073      ; 1.294      ;
+; 1.027 ; led_blink:clock_1khz|counter[5]  ; led_blink:clock_1khz|counter[6]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.294      ;
+; 1.027 ; led_blink:clock_1khz|counter[13] ; led_blink:clock_1khz|counter[14] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.294      ;
+; 1.027 ; led_blink:clock_1khz|counter[6]  ; led_blink:clock_1khz|counter[7]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.294      ;
+; 1.027 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[23] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.294      ;
+; 1.027 ; led_blink:clock_1khz|counter[3]  ; led_blink:clock_1khz|counter[4]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.294      ;
+; 1.028 ; led_blink:clock_1khz|counter[14] ; led_blink:clock_1khz|counter[15] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.295      ;
+; 1.028 ; led_blink:clock_1khz|counter[16] ; led_blink:clock_1khz|counter[17] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.295      ;
+; 1.028 ; led_blink:clock_1khz|counter[21] ; led_blink:clock_1khz|counter[22] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.295      ;
+; 1.028 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[12] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.295      ;
+; 1.028 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[20] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.295      ;
+; 1.028 ; led_blink:clock_1khz|counter[29] ; led_blink:clock_1khz|counter[30] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.295      ;
+; 1.029 ; led_blink:clock_1khz|counter[4]  ; led_blink:clock_1khz|counter[5]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.296      ;
+; 1.029 ; led_blink:clock_1khz|counter[12] ; led_blink:clock_1khz|counter[13] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.296      ;
+; 1.029 ; led_blink:clock_1khz|counter[10] ; led_blink:clock_1khz|counter[11] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.296      ;
+; 1.029 ; led_blink:clock_1khz|counter[18] ; led_blink:clock_1khz|counter[19] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.296      ;
+; 1.029 ; led_blink:clock_1khz|counter[20] ; led_blink:clock_1khz|counter[21] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.296      ;
+; 1.029 ; led_blink:clock_1khz|counter[27] ; led_blink:clock_1khz|counter[28] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.296      ;
+; 1.030 ; led_blink:clock_1khz|counter[28] ; led_blink:clock_1khz|counter[29] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.297      ;
+; 1.030 ; led_blink:clock_1khz|counter[26] ; led_blink:clock_1khz|counter[27] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.297      ;
+; 1.030 ; led_blink:clock_1khz|counter[8]  ; led_blink:clock_1khz|counter[9]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.297      ;
+; 1.030 ; led_blink:clock_1khz|counter[30] ; led_blink:clock_1khz|counter[31] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.297      ;
+; 1.031 ; led_blink:clock_1khz|counter[24] ; led_blink:clock_1khz|counter[25] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.298      ;
+; 1.031 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[18] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.298      ;
+; 1.032 ; led_blink:clock_1khz|counter[9]  ; led_blink:clock_1khz|counter[10] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.299      ;
+; 1.033 ; led_blink:clock_1khz|counter[7]  ; led_blink:clock_1khz|counter[8]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.300      ;
+; 1.033 ; led_blink:clock_1khz|counter[25] ; led_blink:clock_1khz|counter[26] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.300      ;
+; 1.033 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[24] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.300      ;
+; 1.042 ; led_blink:clock_1khz|counter[6]  ; led_blink:clock_1khz|counter[8]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.309      ;
+; 1.042 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[24] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.309      ;
+; 1.043 ; led_blink:clock_1khz|counter[14] ; led_blink:clock_1khz|counter[16] ; clk                        ; clk         ; 0.000        ; 0.073      ; 1.311      ;
+; 1.044 ; led_blink:clock_1khz|counter[16] ; led_blink:clock_1khz|counter[18] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.311      ;
+; 1.045 ; led_blink:clock_1khz|counter[4]  ; led_blink:clock_1khz|counter[6]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.312      ;
+; 1.045 ; led_blink:clock_1khz|counter[12] ; led_blink:clock_1khz|counter[14] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.312      ;
+; 1.045 ; led_blink:clock_1khz|counter[10] ; led_blink:clock_1khz|counter[12] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.312      ;
+; 1.045 ; led_blink:clock_1khz|counter[18] ; led_blink:clock_1khz|counter[20] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.312      ;
+; 1.046 ; led_blink:clock_1khz|counter[20] ; led_blink:clock_1khz|counter[22] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.313      ;
+; 1.046 ; led_blink:clock_1khz|counter[28] ; led_blink:clock_1khz|counter[30] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.313      ;
+; 1.046 ; led_blink:clock_1khz|counter[26] ; led_blink:clock_1khz|counter[28] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.313      ;
+; 1.046 ; led_blink:clock_1khz|counter[8]  ; led_blink:clock_1khz|counter[10] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.313      ;
+; 1.047 ; led_blink:clock_1khz|counter[24] ; led_blink:clock_1khz|counter[26] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.314      ;
+; 1.119 ; led_blink:clock_1khz|counter[15] ; led_blink:clock_1khz|counter[17] ; clk                        ; clk         ; 0.000        ; 0.073      ; 1.387      ;
+; 1.120 ; led_blink:clock_1khz|counter[13] ; led_blink:clock_1khz|counter[15] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.387      ;
+; 1.120 ; led_blink:clock_1khz|counter[3]  ; led_blink:clock_1khz|counter[5]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.387      ;
+; 1.121 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[13] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.388      ;
+; 1.121 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[21] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.388      ;
+; 1.121 ; led_blink:clock_1khz|counter[5]  ; led_blink:clock_1khz|counter[7]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.388      ;
+; 1.122 ; led_blink:clock_1khz|counter[27] ; led_blink:clock_1khz|counter[29] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.389      ;
+; 1.122 ; led_blink:clock_1khz|counter[29] ; led_blink:clock_1khz|counter[31] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.389      ;
+; 1.122 ; led_blink:clock_1khz|counter[21] ; led_blink:clock_1khz|counter[23] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.389      ;
+; 1.126 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[19] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.393      ;
+; 1.127 ; led_blink:clock_1khz|counter[9]  ; led_blink:clock_1khz|counter[11] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.394      ;
+; 1.127 ; led_blink:clock_1khz|counter[7]  ; led_blink:clock_1khz|counter[9]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.394      ;
+; 1.128 ; led_blink:clock_1khz|counter[25] ; led_blink:clock_1khz|counter[27] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.395      ;
+; 1.128 ; led_blink:clock_1khz|counter[2]  ; led_blink:clock_1khz|counter[5]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.395      ;
+; 1.129 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[25] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.396      ;
+; 1.145 ; led_blink:clock_1khz|counter[2]  ; led_blink:clock_1khz|counter[6]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.412      ;
+; 1.148 ; led_blink:clock_1khz|counter[13] ; led_blink:clock_1khz|counter[16] ; clk                        ; clk         ; 0.000        ; 0.073      ; 1.416      ;
+; 1.148 ; led_blink:clock_1khz|counter[15] ; led_blink:clock_1khz|counter[18] ; clk                        ; clk         ; 0.000        ; 0.073      ; 1.416      ;
+; 1.149 ; led_blink:clock_1khz|counter[5]  ; led_blink:clock_1khz|counter[8]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.416      ;
+; 1.149 ; led_blink:clock_1khz|counter[14] ; led_blink:clock_1khz|counter[17] ; clk                        ; clk         ; 0.000        ; 0.073      ; 1.417      ;
+; 1.149 ; led_blink:clock_1khz|counter[6]  ; led_blink:clock_1khz|counter[9]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.416      ;
+; 1.149 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[25] ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.416      ;
+; 1.149 ; led_blink:clock_1khz|counter[3]  ; led_blink:clock_1khz|counter[6]  ; clk                        ; clk         ; 0.000        ; 0.072      ; 1.416      ;
++-------+----------------------------------+----------------------------------+----------------------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary                  ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; clk                        ; -1.467 ; -32.411       ;
+; led_blink:clock_1khz|state ; 0.563  ; 0.000         ;
++----------------------------+--------+---------------+
+
+
++----------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                  ;
++----------------------------+-------+---------------+
+; Clock                      ; Slack ; End Point TNS ;
++----------------------------+-------+---------------+
+; led_blink:clock_1khz|state ; 0.204 ; 0.000         ;
+; clk                        ; 0.279 ; 0.000         ;
++----------------------------+-------+---------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++-----------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary    ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; clk                        ; -3.000 ; -38.159       ;
+; led_blink:clock_1khz|state ; -1.000 ; -4.000        ;
++----------------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                                                  ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.467 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.037     ; 2.417      ;
+; -1.398 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.037     ; 2.348      ;
+; -1.346 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.037     ; 2.296      ;
+; -1.325 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.037     ; 2.275      ;
+; -1.304 ; led_blink:clock_1khz|counter[20] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.037     ; 2.254      ;
+; -1.296 ; led_blink:clock_1khz|counter[24] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.037     ; 2.246      ;
+; -1.280 ; led_blink:clock_1khz|counter[18] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.037     ; 2.230      ;
+; -1.270 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.035     ; 2.222      ;
+; -1.257 ; led_blink:clock_1khz|counter[30] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.037     ; 2.207      ;
+; -1.201 ; led_blink:clock_1khz|counter[6]  ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.035     ; 2.153      ;
+; -1.187 ; led_blink:clock_1khz|counter[26] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.037     ; 2.137      ;
+; -1.169 ; led_blink:clock_1khz|counter[27] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.037     ; 2.119      ;
+; -1.156 ; led_blink:clock_1khz|counter[4]  ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.035     ; 2.108      ;
+; -1.152 ; led_blink:clock_1khz|counter[3]  ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.035     ; 2.104      ;
+; -1.151 ; led_blink:clock_1khz|counter[21] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.037     ; 2.101      ;
+; -1.150 ; led_blink:clock_1khz|counter[29] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.037     ; 2.100      ;
+; -1.150 ; led_blink:clock_1khz|counter[13] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.035     ; 2.102      ;
+; -1.137 ; led_blink:clock_1khz|counter[14] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.035     ; 2.089      ;
+; -1.137 ; led_blink:clock_1khz|counter[5]  ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.035     ; 2.089      ;
+; -1.120 ; led_blink:clock_1khz|counter[12] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.035     ; 2.072      ;
+; -1.091 ; led_blink:clock_1khz|counter[31] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.037     ; 2.041      ;
+; -1.085 ; led_blink:clock_1khz|counter[25] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.037     ; 2.035      ;
+; -1.056 ; led_blink:clock_1khz|counter[7]  ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.035     ; 2.008      ;
+; -1.046 ; led_blink:clock_1khz|counter[28] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.996      ;
+; -1.046 ; led_blink:clock_1khz|counter[9]  ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.035     ; 1.998      ;
+; -1.027 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[16] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.977      ;
+; -1.027 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[28] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.977      ;
+; -1.027 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[17] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.977      ;
+; -1.027 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[18] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.977      ;
+; -1.027 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[19] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.977      ;
+; -1.027 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[20] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.977      ;
+; -1.027 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[21] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.977      ;
+; -1.027 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[22] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.977      ;
+; -1.027 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[23] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.977      ;
+; -1.027 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[24] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.977      ;
+; -1.027 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[25] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.977      ;
+; -1.027 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[26] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.977      ;
+; -1.027 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[27] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.977      ;
+; -1.027 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[30] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.977      ;
+; -1.027 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[29] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.977      ;
+; -1.027 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[31] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.977      ;
+; -1.026 ; led_blink:clock_1khz|counter[1]  ; led_blink:clock_1khz|counter[31] ; clk          ; clk         ; 1.000        ; -0.235     ; 1.778      ;
+; -1.022 ; led_blink:clock_1khz|counter[1]  ; led_blink:clock_1khz|counter[30] ; clk          ; clk         ; 1.000        ; -0.235     ; 1.774      ;
+; -1.012 ; led_blink:clock_1khz|counter[0]  ; led_blink:clock_1khz|counter[31] ; clk          ; clk         ; 1.000        ; -0.235     ; 1.764      ;
+; -0.974 ; led_blink:clock_1khz|counter[0]  ; led_blink:clock_1khz|counter[30] ; clk          ; clk         ; 1.000        ; -0.235     ; 1.726      ;
+; -0.967 ; led_blink:clock_1khz|counter[8]  ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.035     ; 1.919      ;
+; -0.958 ; led_blink:clock_1khz|counter[1]  ; led_blink:clock_1khz|counter[29] ; clk          ; clk         ; 1.000        ; -0.235     ; 1.710      ;
+; -0.958 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[16] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[28] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[17] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[18] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[19] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[20] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[21] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[22] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[23] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[24] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[25] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[26] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[27] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[30] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[29] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.958 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[31] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.908      ;
+; -0.955 ; led_blink:clock_1khz|counter[16] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.037     ; 1.905      ;
+; -0.954 ; led_blink:clock_1khz|counter[1]  ; led_blink:clock_1khz|counter[28] ; clk          ; clk         ; 1.000        ; -0.235     ; 1.706      ;
+; -0.944 ; led_blink:clock_1khz|counter[0]  ; led_blink:clock_1khz|counter[29] ; clk          ; clk         ; 1.000        ; -0.235     ; 1.696      ;
+; -0.931 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[12] ; clk          ; clk         ; 1.000        ; -0.038     ; 1.880      ;
+; -0.931 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[10] ; clk          ; clk         ; 1.000        ; -0.038     ; 1.880      ;
+; -0.931 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[2]  ; clk          ; clk         ; 1.000        ; -0.038     ; 1.880      ;
+; -0.931 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[3]  ; clk          ; clk         ; 1.000        ; -0.038     ; 1.880      ;
+; -0.931 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[4]  ; clk          ; clk         ; 1.000        ; -0.038     ; 1.880      ;
+; -0.931 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[5]  ; clk          ; clk         ; 1.000        ; -0.038     ; 1.880      ;
+; -0.931 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[6]  ; clk          ; clk         ; 1.000        ; -0.038     ; 1.880      ;
+; -0.931 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[7]  ; clk          ; clk         ; 1.000        ; -0.038     ; 1.880      ;
+; -0.931 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[8]  ; clk          ; clk         ; 1.000        ; -0.038     ; 1.880      ;
+; -0.931 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[9]  ; clk          ; clk         ; 1.000        ; -0.038     ; 1.880      ;
+; -0.931 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[13] ; clk          ; clk         ; 1.000        ; -0.038     ; 1.880      ;
+; -0.931 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[11] ; clk          ; clk         ; 1.000        ; -0.038     ; 1.880      ;
+; -0.931 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[14] ; clk          ; clk         ; 1.000        ; -0.038     ; 1.880      ;
+; -0.931 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[15] ; clk          ; clk         ; 1.000        ; -0.038     ; 1.880      ;
+; -0.911 ; led_blink:clock_1khz|counter[10] ; led_blink:clock_1khz|state       ; clk          ; clk         ; 1.000        ; -0.035     ; 1.863      ;
+; -0.906 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[16] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.856      ;
+; -0.906 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[28] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.856      ;
+; -0.906 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[17] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.856      ;
+; -0.906 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[18] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.856      ;
+; -0.906 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[19] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.856      ;
+; -0.906 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[20] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.856      ;
+; -0.906 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[21] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.856      ;
+; -0.906 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[22] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.856      ;
+; -0.906 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[23] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.856      ;
+; -0.906 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[24] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.856      ;
+; -0.906 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[25] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.856      ;
+; -0.906 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[26] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.856      ;
+; -0.906 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[27] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.856      ;
+; -0.906 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[30] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.856      ;
+; -0.906 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[29] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.856      ;
+; -0.906 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[31] ; clk          ; clk         ; 1.000        ; -0.037     ; 1.856      ;
+; -0.906 ; led_blink:clock_1khz|counter[0]  ; led_blink:clock_1khz|counter[28] ; clk          ; clk         ; 1.000        ; -0.235     ; 1.658      ;
+; -0.890 ; led_blink:clock_1khz|counter[1]  ; led_blink:clock_1khz|counter[27] ; clk          ; clk         ; 1.000        ; -0.235     ; 1.642      ;
+; -0.886 ; led_blink:clock_1khz|counter[1]  ; led_blink:clock_1khz|counter[26] ; clk          ; clk         ; 1.000        ; -0.235     ; 1.638      ;
++--------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'led_blink:clock_1khz|state'                                                                                                                                 ;
++-------+---------------------------------------+---------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                               ; Launch Clock               ; Latch Clock                ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+---------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; 0.563 ; shift_register4:enable_outputs|tmp[2] ; shift_register4:enable_outputs|tmp[3] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 1.000        ; -0.037     ; 0.387      ;
+; 0.566 ; shift_register4:enable_outputs|tmp[0] ; shift_register4:enable_outputs|tmp[1] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 1.000        ; -0.037     ; 0.384      ;
+; 0.566 ; shift_register4:enable_outputs|tmp[1] ; shift_register4:enable_outputs|tmp[2] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 1.000        ; -0.037     ; 0.384      ;
+; 0.569 ; shift_register4:enable_outputs|tmp[3] ; shift_register4:enable_outputs|tmp[0] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 1.000        ; -0.037     ; 0.381      ;
++-------+---------------------------------------+---------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'led_blink:clock_1khz|state'                                                                                                                                  ;
++-------+---------------------------------------+---------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                               ; Launch Clock               ; Latch Clock                ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+---------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+; 0.204 ; shift_register4:enable_outputs|tmp[1] ; shift_register4:enable_outputs|tmp[2] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 0.000        ; 0.037      ; 0.325      ;
+; 0.206 ; shift_register4:enable_outputs|tmp[2] ; shift_register4:enable_outputs|tmp[3] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 0.000        ; 0.037      ; 0.327      ;
+; 0.209 ; shift_register4:enable_outputs|tmp[3] ; shift_register4:enable_outputs|tmp[0] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 0.000        ; 0.037      ; 0.330      ;
+; 0.210 ; shift_register4:enable_outputs|tmp[0] ; shift_register4:enable_outputs|tmp[1] ; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 0.000        ; 0.037      ; 0.331      ;
++-------+---------------------------------------+---------------------------------------+----------------------------+----------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                                                ;
++-------+----------------------------------+----------------------------------+----------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                          ; Launch Clock               ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+----------------------------------+----------------------------+-------------+--------------+------------+------------+
+; 0.279 ; led_blink:clock_1khz|state       ; led_blink:clock_1khz|state       ; led_blink:clock_1khz|state ; clk         ; 0.000        ; 1.173      ; 1.671      ;
+; 0.285 ; led_blink:clock_1khz|counter[1]  ; led_blink:clock_1khz|counter[1]  ; clk                        ; clk         ; 0.000        ; 0.044      ; 0.413      ;
+; 0.295 ; led_blink:clock_1khz|counter[2]  ; led_blink:clock_1khz|counter[2]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.415      ;
+; 0.297 ; led_blink:clock_1khz|counter[0]  ; led_blink:clock_1khz|counter[0]  ; clk                        ; clk         ; 0.000        ; 0.044      ; 0.425      ;
+; 0.303 ; led_blink:clock_1khz|counter[15] ; led_blink:clock_1khz|counter[15] ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.423      ;
+; 0.303 ; led_blink:clock_1khz|counter[31] ; led_blink:clock_1khz|counter[31] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.424      ;
+; 0.304 ; led_blink:clock_1khz|counter[3]  ; led_blink:clock_1khz|counter[3]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; led_blink:clock_1khz|counter[5]  ; led_blink:clock_1khz|counter[5]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; led_blink:clock_1khz|counter[13] ; led_blink:clock_1khz|counter[13] ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[17] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[19] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; led_blink:clock_1khz|counter[21] ; led_blink:clock_1khz|counter[21] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; led_blink:clock_1khz|counter[27] ; led_blink:clock_1khz|counter[27] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; led_blink:clock_1khz|counter[29] ; led_blink:clock_1khz|counter[29] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.305 ; led_blink:clock_1khz|counter[6]  ; led_blink:clock_1khz|counter[6]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; led_blink:clock_1khz|counter[7]  ; led_blink:clock_1khz|counter[7]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[11] ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; led_blink:clock_1khz|counter[16] ; led_blink:clock_1khz|counter[16] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[22] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[23] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; led_blink:clock_1khz|counter[25] ; led_blink:clock_1khz|counter[25] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.306 ; led_blink:clock_1khz|counter[8]  ; led_blink:clock_1khz|counter[8]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; led_blink:clock_1khz|counter[9]  ; led_blink:clock_1khz|counter[9]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; led_blink:clock_1khz|counter[14] ; led_blink:clock_1khz|counter[14] ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; led_blink:clock_1khz|counter[18] ; led_blink:clock_1khz|counter[18] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; led_blink:clock_1khz|counter[20] ; led_blink:clock_1khz|counter[20] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; led_blink:clock_1khz|counter[24] ; led_blink:clock_1khz|counter[24] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; led_blink:clock_1khz|counter[30] ; led_blink:clock_1khz|counter[30] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.307 ; led_blink:clock_1khz|counter[12] ; led_blink:clock_1khz|counter[12] ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; led_blink:clock_1khz|counter[10] ; led_blink:clock_1khz|counter[10] ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; led_blink:clock_1khz|counter[4]  ; led_blink:clock_1khz|counter[4]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; led_blink:clock_1khz|counter[28] ; led_blink:clock_1khz|counter[28] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.428      ;
+; 0.307 ; led_blink:clock_1khz|counter[26] ; led_blink:clock_1khz|counter[26] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.428      ;
+; 0.444 ; led_blink:clock_1khz|counter[0]  ; led_blink:clock_1khz|counter[1]  ; clk                        ; clk         ; 0.000        ; 0.044      ; 0.572      ;
+; 0.450 ; led_blink:clock_1khz|counter[15] ; led_blink:clock_1khz|counter[16] ; clk                        ; clk         ; 0.000        ; 0.038      ; 0.572      ;
+; 0.453 ; led_blink:clock_1khz|counter[2]  ; led_blink:clock_1khz|counter[3]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.573      ;
+; 0.453 ; led_blink:clock_1khz|counter[5]  ; led_blink:clock_1khz|counter[6]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.573      ;
+; 0.453 ; led_blink:clock_1khz|counter[21] ; led_blink:clock_1khz|counter[22] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.453 ; led_blink:clock_1khz|counter[13] ; led_blink:clock_1khz|counter[14] ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.573      ;
+; 0.453 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[18] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.453 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[20] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.453 ; led_blink:clock_1khz|counter[29] ; led_blink:clock_1khz|counter[30] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.453 ; led_blink:clock_1khz|counter[3]  ; led_blink:clock_1khz|counter[4]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.573      ;
+; 0.453 ; led_blink:clock_1khz|counter[27] ; led_blink:clock_1khz|counter[28] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.454 ; led_blink:clock_1khz|counter[7]  ; led_blink:clock_1khz|counter[8]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[24] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.575      ;
+; 0.454 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[12] ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; led_blink:clock_1khz|counter[25] ; led_blink:clock_1khz|counter[26] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.575      ;
+; 0.455 ; led_blink:clock_1khz|counter[9]  ; led_blink:clock_1khz|counter[10] ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.575      ;
+; 0.456 ; led_blink:clock_1khz|counter[2]  ; led_blink:clock_1khz|counter[4]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.576      ;
+; 0.463 ; led_blink:clock_1khz|counter[16] ; led_blink:clock_1khz|counter[17] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.584      ;
+; 0.463 ; led_blink:clock_1khz|counter[6]  ; led_blink:clock_1khz|counter[7]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.583      ;
+; 0.463 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[23] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.584      ;
+; 0.464 ; led_blink:clock_1khz|counter[14] ; led_blink:clock_1khz|counter[15] ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.584      ;
+; 0.464 ; led_blink:clock_1khz|counter[30] ; led_blink:clock_1khz|counter[31] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.585      ;
+; 0.464 ; led_blink:clock_1khz|counter[18] ; led_blink:clock_1khz|counter[19] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.585      ;
+; 0.464 ; led_blink:clock_1khz|counter[20] ; led_blink:clock_1khz|counter[21] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.585      ;
+; 0.464 ; led_blink:clock_1khz|counter[24] ; led_blink:clock_1khz|counter[25] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.585      ;
+; 0.464 ; led_blink:clock_1khz|counter[8]  ; led_blink:clock_1khz|counter[9]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.584      ;
+; 0.465 ; led_blink:clock_1khz|counter[4]  ; led_blink:clock_1khz|counter[5]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.585      ;
+; 0.465 ; led_blink:clock_1khz|counter[12] ; led_blink:clock_1khz|counter[13] ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.585      ;
+; 0.465 ; led_blink:clock_1khz|counter[26] ; led_blink:clock_1khz|counter[27] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.586      ;
+; 0.465 ; led_blink:clock_1khz|counter[28] ; led_blink:clock_1khz|counter[29] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.586      ;
+; 0.465 ; led_blink:clock_1khz|counter[10] ; led_blink:clock_1khz|counter[11] ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.585      ;
+; 0.465 ; led_blink:clock_1khz|counter[14] ; led_blink:clock_1khz|counter[16] ; clk                        ; clk         ; 0.000        ; 0.038      ; 0.587      ;
+; 0.466 ; led_blink:clock_1khz|counter[16] ; led_blink:clock_1khz|counter[18] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.587      ;
+; 0.466 ; led_blink:clock_1khz|counter[6]  ; led_blink:clock_1khz|counter[8]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.586      ;
+; 0.466 ; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|counter[24] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.587      ;
+; 0.467 ; led_blink:clock_1khz|counter[20] ; led_blink:clock_1khz|counter[22] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.588      ;
+; 0.467 ; led_blink:clock_1khz|counter[18] ; led_blink:clock_1khz|counter[20] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.588      ;
+; 0.467 ; led_blink:clock_1khz|counter[24] ; led_blink:clock_1khz|counter[26] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.588      ;
+; 0.467 ; led_blink:clock_1khz|counter[8]  ; led_blink:clock_1khz|counter[10] ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.587      ;
+; 0.468 ; led_blink:clock_1khz|counter[4]  ; led_blink:clock_1khz|counter[6]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.588      ;
+; 0.468 ; led_blink:clock_1khz|counter[12] ; led_blink:clock_1khz|counter[14] ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.588      ;
+; 0.468 ; led_blink:clock_1khz|counter[28] ; led_blink:clock_1khz|counter[30] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.589      ;
+; 0.468 ; led_blink:clock_1khz|counter[26] ; led_blink:clock_1khz|counter[28] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.589      ;
+; 0.468 ; led_blink:clock_1khz|counter[10] ; led_blink:clock_1khz|counter[12] ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.588      ;
+; 0.513 ; led_blink:clock_1khz|counter[15] ; led_blink:clock_1khz|counter[17] ; clk                        ; clk         ; 0.000        ; 0.038      ; 0.635      ;
+; 0.516 ; led_blink:clock_1khz|counter[5]  ; led_blink:clock_1khz|counter[7]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.636      ;
+; 0.516 ; led_blink:clock_1khz|counter[21] ; led_blink:clock_1khz|counter[23] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.637      ;
+; 0.516 ; led_blink:clock_1khz|counter[13] ; led_blink:clock_1khz|counter[15] ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.636      ;
+; 0.516 ; led_blink:clock_1khz|counter[29] ; led_blink:clock_1khz|counter[31] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.637      ;
+; 0.516 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[19] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.637      ;
+; 0.516 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[21] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.637      ;
+; 0.516 ; led_blink:clock_1khz|counter[3]  ; led_blink:clock_1khz|counter[5]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.636      ;
+; 0.516 ; led_blink:clock_1khz|counter[27] ; led_blink:clock_1khz|counter[29] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.637      ;
+; 0.516 ; led_blink:clock_1khz|counter[15] ; led_blink:clock_1khz|counter[18] ; clk                        ; clk         ; 0.000        ; 0.038      ; 0.638      ;
+; 0.517 ; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|counter[25] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.638      ;
+; 0.517 ; led_blink:clock_1khz|counter[7]  ; led_blink:clock_1khz|counter[9]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.637      ;
+; 0.517 ; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|counter[13] ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.637      ;
+; 0.517 ; led_blink:clock_1khz|counter[25] ; led_blink:clock_1khz|counter[27] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.638      ;
+; 0.517 ; led_blink:clock_1khz|counter[13] ; led_blink:clock_1khz|counter[16] ; clk                        ; clk         ; 0.000        ; 0.038      ; 0.639      ;
+; 0.518 ; led_blink:clock_1khz|counter[9]  ; led_blink:clock_1khz|counter[11] ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.638      ;
+; 0.519 ; led_blink:clock_1khz|counter[5]  ; led_blink:clock_1khz|counter[8]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.639      ;
+; 0.519 ; led_blink:clock_1khz|counter[21] ; led_blink:clock_1khz|counter[24] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.640      ;
+; 0.519 ; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|counter[22] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.640      ;
+; 0.519 ; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|counter[20] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.640      ;
+; 0.519 ; led_blink:clock_1khz|counter[3]  ; led_blink:clock_1khz|counter[6]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.639      ;
+; 0.519 ; led_blink:clock_1khz|counter[27] ; led_blink:clock_1khz|counter[30] ; clk                        ; clk         ; 0.000        ; 0.037      ; 0.640      ;
+; 0.519 ; led_blink:clock_1khz|counter[2]  ; led_blink:clock_1khz|counter[5]  ; clk                        ; clk         ; 0.000        ; 0.036      ; 0.639      ;
++-------+----------------------------------+----------------------------------+----------------------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                       ;
++-----------------------------+----------+-------+----------+---------+---------------------+
+; Clock                       ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++-----------------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack            ; -4.807   ; 0.204 ; N/A      ; N/A     ; -3.000              ;
+;  clk                        ; -4.807   ; 0.279 ; N/A      ; N/A     ; -3.000              ;
+;  led_blink:clock_1khz|state ; -0.004   ; 0.204 ; N/A      ; N/A     ; -1.487              ;
+; Design-wide TNS             ; -126.075 ; 0.0   ; 0.0      ; 0.0     ; -58.019             ;
+;  clk                        ; -126.069 ; 0.000 ; N/A      ; N/A     ; -52.071             ;
+;  led_blink:clock_1khz|state ; -0.006   ; 0.000 ; N/A      ; N/A     ; -5.948              ;
++-----------------------------+----------+-------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                        ;
++-------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin               ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++-------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; ya                ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; yb                ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; yc                ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; yd                ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ye                ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; yf                ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; yg                ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; yp                ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; display_enable[0] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; display_enable[1] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; display_enable[2] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; display_enable[3] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++-------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; x2                      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; x4                      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; x1                      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; x3                      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
++-------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin               ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; ya                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; yb                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; yc                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; yd                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; ye                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; yf                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; yg                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; yp                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; display_enable[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; display_enable[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; display_enable[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.33 V              ; -0.00425 V          ; 0.168 V                              ; 0.058 V                              ; 3.12e-09 s                  ; 2.87e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.33 V             ; -0.00425 V         ; 0.168 V                             ; 0.058 V                             ; 3.12e-09 s                 ; 2.87e-09 s                 ; Yes                       ; Yes                       ;
+; display_enable[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.57e-09 V                   ; 2.37 V              ; -0.00683 V          ; 0.171 V                              ; 0.018 V                              ; 4.97e-10 s                  ; 6.66e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.57e-09 V                  ; 2.37 V             ; -0.00683 V         ; 0.171 V                             ; 0.018 V                             ; 4.97e-10 s                 ; 6.66e-10 s                 ; Yes                       ; Yes                       ;
++-------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
++-------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin               ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; ya                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; yb                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; yc                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; yd                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; ye                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; yf                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; yg                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; yp                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; display_enable[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; display_enable[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; display_enable[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.33 V              ; -0.00229 V          ; 0.111 V                              ; 0.057 V                              ; 3.78e-09 s                  ; 3.5e-09 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.33 V             ; -0.00229 V         ; 0.111 V                             ; 0.057 V                             ; 3.78e-09 s                 ; 3.5e-09 s                  ; Yes                       ; Yes                       ;
+; display_enable[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.54e-07 V                   ; 2.34 V              ; -0.00774 V          ; 0.109 V                              ; 0.026 V                              ; 6.58e-10 s                  ; 8.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.54e-07 V                  ; 2.34 V             ; -0.00774 V         ; 0.109 V                             ; 0.026 V                             ; 6.58e-10 s                 ; 8.24e-10 s                 ; Yes                       ; Yes                       ;
++-------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
++-------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin               ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; ya                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; yb                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; yc                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; yd                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ye                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; yf                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; yg                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; yp                ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; display_enable[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; display_enable[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; display_enable[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.64 V              ; -0.0113 V           ; 0.208 V                              ; 0.179 V                              ; 2.38e-09 s                  ; 2.23e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.64 V             ; -0.0113 V          ; 0.208 V                             ; 0.179 V                             ; 2.38e-09 s                 ; 2.23e-09 s                 ; No                        ; Yes                       ;
+; display_enable[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++-------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                     ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+; From Clock                 ; To Clock                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+; clk                        ; clk                        ; 1518     ; 0        ; 0        ; 0        ;
+; led_blink:clock_1khz|state ; clk                        ; 1        ; 1        ; 0        ; 0        ;
+; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 4        ; 0        ; 0        ; 0        ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                      ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+; From Clock                 ; To Clock                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+; clk                        ; clk                        ; 1518     ; 0        ; 0        ; 0        ;
+; led_blink:clock_1khz|state ; clk                        ; 1        ; 1        ; 0        ; 0        ;
+; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; 4        ; 0        ; 0        ; 0        ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 4     ; 4    ;
+; Unconstrained Input Port Paths  ; 28    ; 28   ;
+; Unconstrained Output Ports      ; 11    ; 11   ;
+; Unconstrained Output Port Paths ; 32    ; 32   ;
++---------------------------------+-------+------+
+
+
++------------------------------------------------------------------------------+
+; Clock Status Summary                                                         ;
++----------------------------+----------------------------+------+-------------+
+; Target                     ; Clock                      ; Type ; Status      ;
++----------------------------+----------------------------+------+-------------+
+; clk                        ; clk                        ; Base ; Constrained ;
+; led_blink:clock_1khz|state ; led_blink:clock_1khz|state ; Base ; Constrained ;
++----------------------------+----------------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; x1         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x2         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x3         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x4         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                                ;
++-------------------+---------------------------------------------------------------------------------------+
+; Output Port       ; Comment                                                                               ;
++-------------------+---------------------------------------------------------------------------------------+
+; display_enable[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_enable[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_enable[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_enable[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ya                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; yb                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; yc                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; yd                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ye                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; yf                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; yg                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; x1         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x2         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x3         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; x4         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                                ;
++-------------------+---------------------------------------------------------------------------------------+
+; Output Port       ; Comment                                                                               ;
++-------------------+---------------------------------------------------------------------------------------+
+; display_enable[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_enable[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_enable[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display_enable[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ya                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; yb                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; yc                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; yd                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ye                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; yf                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; yg                ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sat Feb 11 22:28:27 2023
+Info: Command: quartus_sta display7_out -c display7_out
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'display7_out.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name led_blink:clock_1khz|state led_blink:clock_1khz|state
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -4.807
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -4.807            -126.069 clk 
+    Info (332119):    -0.004              -0.006 led_blink:clock_1khz|state 
+Info (332146): Worst-case hold slack is 0.509
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.509               0.000 led_blink:clock_1khz|state 
+    Info (332119):     0.717               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -52.071 clk 
+    Info (332119):    -1.487              -5.948 led_blink:clock_1khz|state 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -4.458
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -4.458            -116.288 clk 
+    Info (332119):     0.090               0.000 led_blink:clock_1khz|state 
+Info (332146): Worst-case hold slack is 0.469
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.469               0.000 led_blink:clock_1khz|state 
+    Info (332119):     0.667               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -52.071 clk 
+    Info (332119):    -1.487              -5.948 led_blink:clock_1khz|state 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.467
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.467             -32.411 clk 
+    Info (332119):     0.563               0.000 led_blink:clock_1khz|state 
+Info (332146): Worst-case hold slack is 0.204
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.204               0.000 led_blink:clock_1khz|state 
+    Info (332119):     0.279               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -38.159 clk 
+    Info (332119):    -1.000              -4.000 led_blink:clock_1khz|state 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4752 megabytes
+    Info: Processing ended: Sat Feb 11 22:28:28 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

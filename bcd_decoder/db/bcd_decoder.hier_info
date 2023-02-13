@@ -2,7 +2,6 @@
 A => ya.IN0
 A => yb.IN0
 A => yd.IN0
-A => yp.IN1
 A => ya.IN0
 A => yd.IN0
 A => yd.IN0
@@ -34,14 +33,13 @@ D => yg.IN1
 D => ya.IN1
 D => ya.IN1
 D => yd.IN1
-ya << ya.DB_MAX_OUTPUT_PORT_TYPE
-yb << yb.DB_MAX_OUTPUT_PORT_TYPE
-yc << yc.DB_MAX_OUTPUT_PORT_TYPE
-yd << yd.DB_MAX_OUTPUT_PORT_TYPE
-ye << ye.DB_MAX_OUTPUT_PORT_TYPE
-yf << yf.DB_MAX_OUTPUT_PORT_TYPE
-yg << yg.DB_MAX_OUTPUT_PORT_TYPE
-yp << yp.DB_MAX_OUTPUT_PORT_TYPE
-yen << <GND>
+ya <= ya.DB_MAX_OUTPUT_PORT_TYPE
+yb <= yb.DB_MAX_OUTPUT_PORT_TYPE
+yc <= yc.DB_MAX_OUTPUT_PORT_TYPE
+yd <= yd.DB_MAX_OUTPUT_PORT_TYPE
+ye <= ye.DB_MAX_OUTPUT_PORT_TYPE
+yf <= yf.DB_MAX_OUTPUT_PORT_TYPE
+yg <= yg.DB_MAX_OUTPUT_PORT_TYPE
+yen <= <GND>
 
 
