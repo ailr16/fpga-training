@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Feb 24 22:35:16 2023
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : delay
+Top-level Entity Name : delay
+Family : Cyclone IV E
+Total logic elements : 32
+    Total combinational functions : 32
+    Dedicated logic registers : 14
+Total registers : 14
+Total pins : 2
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

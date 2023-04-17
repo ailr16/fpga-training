@@ -1,5 +1,5 @@
 Analysis & Synthesis report for display7_out
-Sat Feb 11 22:28:21 2023
+Sun Apr 16 23:27:08 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,12 +13,15 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Parameter Settings for User Entity Instance: led_blink:clock_1khz
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Parameter Settings for User Entity Instance: led_blink:clock_1khz
+ 12. Parameter Settings for User Entity Instance: nibble_shift_register:instance1
+ 13. Port Connectivity Checks: "nibble_shift_register:instance1"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -45,15 +48,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Feb 11 22:28:21 2023       ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr 16 23:27:08 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; display7_out                                ;
 ; Top-level Entity Name              ; display7_out                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 55                                          ;
-;     Total combinational functions  ; 53                                          ;
-;     Dedicated logic registers      ; 37                                          ;
-; Total registers                    ; 37                                          ;
+; Total logic elements               ; 61                                          ;
+;     Total combinational functions  ; 57                                          ;
+;     Dedicated logic registers      ; 43                                          ;
+; Total registers                    ; 43                                          ;
 ; Total pins                         ; 17                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -165,16 +168,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
-; display7_out.v                   ; yes             ; User Verilog HDL File        ; C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/display7_out.v    ;         ;
-; led_blink.v                      ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/led_blink.v       ;         ;
-; shift_register4.v                ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/shift_register4.v ;         ;
-; bcd_decoder.v                    ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/bcd_decoder.v     ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                           ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                       ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
+; display7_out.v                   ; yes             ; User Verilog HDL File        ; C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/display7_out.v          ;         ;
+; led_blink.v                      ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/led_blink.v             ;         ;
+; shift_register4.v                ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/shift_register4.v       ;         ;
+; nibble_shift_register.v          ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/nibble_shift_register.v ;         ;
+; bcd_decoder.v                    ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/bcd_decoder.v           ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -182,20 +186,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 55        ;
+; Estimated Total logic elements              ; 61        ;
 ;                                             ;           ;
-; Total combinational functions               ; 53        ;
+; Total combinational functions               ; 57        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 16        ;
-;     -- 3 input functions                    ; 2         ;
-;     -- <=2 input functions                  ; 35        ;
+;     -- 4 input functions                    ; 9         ;
+;     -- 3 input functions                    ; 8         ;
+;     -- <=2 input functions                  ; 40        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 22        ;
+;     -- normal mode                          ; 26        ;
 ;     -- arithmetic mode                      ; 31        ;
 ;                                             ;           ;
-; Total registers                             ; 37        ;
-;     -- Dedicated logic registers            ; 37        ;
+; Total registers                             ; 43        ;
+;     -- Dedicated logic registers            ; 43        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 17        ;
@@ -204,22 +208,39 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 33        ;
-; Total fan-out                               ; 271       ;
-; Average fan-out                             ; 2.19      ;
+; Total fan-out                               ; 280       ;
+; Average fan-out                             ; 2.09      ;
 +---------------------------------------------+-----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                            ;
-+-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                          ; Entity Name     ; Library Name ;
-+-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+-----------------+--------------+
-; |display7_out                       ; 53 (0)              ; 37 (0)                    ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |display7_out                                ; display7_out    ; work         ;
-;    |bcd_decoder:display1|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display7_out|bcd_decoder:display1           ; bcd_decoder     ; work         ;
-;    |led_blink:clock_1khz|           ; 44 (44)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display7_out|led_blink:clock_1khz           ; led_blink       ; work         ;
-;    |shift_register4:enable_outputs| ; 2 (2)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display7_out|shift_register4:enable_outputs ; shift_register4 ; work         ;
-+-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+-----------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                    ;
++--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Entity Name           ; Library Name ;
++--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+-----------------------+--------------+
+; |display7_out                        ; 57 (0)              ; 43 (0)                    ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |display7_out                                 ; display7_out          ; work         ;
+;    |bcd_decoder:display1|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display7_out|bcd_decoder:display1            ; bcd_decoder           ; work         ;
+;    |led_blink:clock_1khz|            ; 44 (44)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display7_out|led_blink:clock_1khz            ; led_blink             ; work         ;
+;    |nibble_shift_register:instance1| ; 6 (6)               ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display7_out|nibble_shift_register:instance1 ; nibble_shift_register ; work         ;
++--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                ;
++---------------------------------------------+-----------------------------------------------------+
+; Register name                               ; Reason for Removal                                  ;
++---------------------------------------------+-----------------------------------------------------+
+; nibble_shift_register:instance1|tmp[4]      ; Merged with nibble_shift_register:instance1|tmp[12] ;
+; nibble_shift_register:instance1|tmp[2,6,14] ; Merged with nibble_shift_register:instance1|tmp[10] ;
+; shift_register4:enable_outputs|tmp[3]       ; Merged with nibble_shift_register:instance1|tmp[13] ;
+; shift_register4:enable_outputs|tmp[0]       ; Merged with nibble_shift_register:instance1|tmp[1]  ;
+; nibble_shift_register:instance1|tmp[8]      ; Merged with nibble_shift_register:instance1|tmp[0]  ;
+; shift_register4:enable_outputs|tmp[2]       ; Merged with nibble_shift_register:instance1|tmp[9]  ;
+; shift_register4:enable_outputs|tmp[1]       ; Merged with nibble_shift_register:instance1|tmp[5]  ;
+; nibble_shift_register:instance1|tmp[10]     ; Stuck at GND due to stuck port data_in              ;
+; Total Number of Removed Registers = 10      ;                                                     ;
++---------------------------------------------+-----------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -227,7 +248,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 37    ;
+; Total registers                              ; 43    ;
 ; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -237,16 +258,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; shift_register4:enable_outputs|tmp[1]  ; 2       ;
-; shift_register4:enable_outputs|tmp[2]  ; 2       ;
-; shift_register4:enable_outputs|tmp[3]  ; 2       ;
-; Total number of inverted registers = 3 ;         ;
-+----------------------------------------+---------+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; nibble_shift_register:instance1|tmp[13] ; 9       ;
+; nibble_shift_register:instance1|tmp[12] ; 7       ;
+; nibble_shift_register:instance1|tmp[5]  ; 2       ;
+; nibble_shift_register:instance1|tmp[9]  ; 2       ;
+; nibble_shift_register:instance1|tmp[7]  ; 1       ;
+; nibble_shift_register:instance1|tmp[3]  ; 1       ;
+; Total number of inverted registers = 6  ;         ;
++-----------------------------------------+---------+
 
 
 +-------------------------------------------------------------------+
@@ -259,27 +283,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: nibble_shift_register:instance1 ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; N              ; 12984 ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "nibble_shift_register:instance1"                                                                   ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                ; Type   ; Severity ; Details                                                                             ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; parallel_out[11..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 17                          ;
-; cycloneiii_ff         ; 37                          ;
+; cycloneiii_ff         ; 43                          ;
 ;     SCLR              ; 32                          ;
-;     plain             ; 5                           ;
-; cycloneiii_lcell_comb ; 57                          ;
+;     plain             ; 11                          ;
+; cycloneiii_lcell_comb ; 62                          ;
 ;     arith             ; 31                          ;
 ;         2 data inputs ; 31                          ;
-;     normal            ; 26                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 16                          ;
+;     normal            ; 31                          ;
+;         1 data inputs ; 12                          ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 9                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.93                        ;
+; Average LUT depth     ; 2.83                        ;
 +-----------------------+-----------------------------+
 
 
@@ -298,37 +340,43 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Feb 11 22:28:14 2023
+    Info: Processing started: Sun Apr 16 23:27:01 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off display7_out -c display7_out
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file display7_out.v
     Info (12023): Found entity 1: display7_out File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/display7_out.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at display7_out.v(20): created implicit net for "leds" File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/display7_out.v Line: 20
+Warning (12019): Can't analyze file -- file byte_shift_register.v is missing
 Info (12127): Elaborating entity "display7_out" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at display7_out.v(20): object "leds" assigned a value but never read File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/display7_out.v Line: 20
-Warning (10230): Verilog HDL assignment warning at display7_out.v(20): truncated value with size 4 to match size of target (1) File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/display7_out.v Line: 20
+Warning (10036): Verilog HDL or VHDL warning at display7_out.v(30): object "decNumber" assigned a value but never read File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/display7_out.v Line: 30
 Warning (12125): Using design file led_blink.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: led_blink File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/led_blink.v Line: 1
-Info (12128): Elaborating entity "led_blink" for hierarchy "led_blink:clock_1khz" File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/display7_out.v Line: 18
+Info (12128): Elaborating entity "led_blink" for hierarchy "led_blink:clock_1khz" File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/display7_out.v Line: 24
 Warning (12125): Using design file shift_register4.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: shift_register4 File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/shift_register4.v Line: 1
-Info (12128): Elaborating entity "shift_register4" for hierarchy "shift_register4:enable_outputs" File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/display7_out.v Line: 22
+Info (12128): Elaborating entity "shift_register4" for hierarchy "shift_register4:enable_outputs" File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/display7_out.v Line: 27
+Warning (12125): Using design file nibble_shift_register.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: nibble_shift_register File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/nibble_shift_register.v Line: 1
+Info (12128): Elaborating entity "nibble_shift_register" for hierarchy "nibble_shift_register:instance1" File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/display7_out.v Line: 28
+Warning (10230): Verilog HDL assignment warning at nibble_shift_register.v(2): truncated value with size 32 to match size of target (16) File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/nibble_shift_register.v Line: 2
 Warning (12125): Using design file bcd_decoder.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: bcd_decoder File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/bcd_decoder.v Line: 1
-Info (12128): Elaborating entity "bcd_decoder" for hierarchy "bcd_decoder:display1" File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/display7_out.v Line: 24
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "yp" is stuck at VCC File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/display7_out.v Line: 13
+Info (12128): Elaborating entity "bcd_decoder" for hierarchy "bcd_decoder:display1" File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/display7_out.v Line: 32
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 72 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "x1" File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/display7_out.v Line: 1
+    Warning (15610): No output dependent on input pin "x2" File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/display7_out.v Line: 2
+    Warning (15610): No output dependent on input pin "x3" File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/display7_out.v Line: 3
+    Warning (15610): No output dependent on input pin "x4" File: C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/display7_out.v Line: 4
+Info (21057): Implemented 78 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 55 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4748 megabytes
-    Info: Processing ended: Sat Feb 11 22:28:21 2023
+    Info (21061): Implemented 61 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 4752 megabytes
+    Info: Processing ended: Sun Apr 16 23:27:08 2023
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:15
 

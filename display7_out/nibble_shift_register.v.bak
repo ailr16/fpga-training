@@ -1,0 +1,1 @@
+module byte_shift_register (input clk, input []byte_in, output wire [3:0] parallel_out, output wire bit_out);

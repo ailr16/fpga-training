@@ -1,5 +1,5 @@
 Fitter report for display7_out
-Sat Feb 11 22:28:25 2023
+Sun Apr 16 23:27:12 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -69,17 +69,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sat Feb 11 22:28:25 2023       ;
+; Fitter Status                      ; Successful - Sun Apr 16 23:27:12 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; display7_out                                ;
 ; Top-level Entity Name              ; display7_out                                ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6E22C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 56 / 6,272 ( < 1 % )                        ;
-;     Total combinational functions  ; 53 / 6,272 ( < 1 % )                        ;
-;     Dedicated logic registers      ; 37 / 6,272 ( < 1 % )                        ;
-; Total registers                    ; 37                                          ;
+; Total logic elements               ; 61 / 6,272 ( < 1 % )                        ;
+;     Total combinational functions  ; 57 / 6,272 ( < 1 % )                        ;
+;     Dedicated logic registers      ; 43 / 6,272 ( < 1 % )                        ;
+; Total registers                    ; 43                                          ;
 ; Total pins                         ; 17 / 92 ( 18 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
@@ -176,6 +176,7 @@ https://fpgasoftware.intel.com/eula.
 ; Location ;                ;              ; leds[1]    ; PIN_85        ; QSF Assignment ;
 ; Location ;                ;              ; leds[2]    ; PIN_86        ; QSF Assignment ;
 ; Location ;                ;              ; leds[3]    ; PIN_87        ; QSF Assignment ;
+; Location ;                ;              ; mon_clk    ; PIN_80        ; QSF Assignment ;
 +----------+----------------+--------------+------------+---------------+----------------+
 
 
@@ -185,8 +186,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 137 ) ; 0.00 % ( 0 / 137 )         ; 0.00 % ( 0 / 137 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 137 ) ; 0.00 % ( 0 / 137 )         ; 0.00 % ( 0 / 137 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 147 ) ; 0.00 % ( 0 / 147 )         ; 0.00 % ( 0 / 147 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 147 ) ; 0.00 % ( 0 / 147 )         ; 0.00 % ( 0 / 147 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -209,7 +210,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 127 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 137 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -225,26 +226,26 @@ The pin-out file can be found in C:/Users/ailozano/OneDrive - Intel Corporation/
 +---------------------------------------------+----------------------+
 ; Resource                                    ; Usage                ;
 +---------------------------------------------+----------------------+
-; Total logic elements                        ; 56 / 6,272 ( < 1 % ) ;
-;     -- Combinational with no register       ; 19                   ;
-;     -- Register only                        ; 3                    ;
-;     -- Combinational with a register        ; 34                   ;
+; Total logic elements                        ; 61 / 6,272 ( < 1 % ) ;
+;     -- Combinational with no register       ; 18                   ;
+;     -- Register only                        ; 4                    ;
+;     -- Combinational with a register        ; 39                   ;
 ;                                             ;                      ;
 ; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 16                   ;
-;     -- 3 input functions                    ; 2                    ;
-;     -- <=2 input functions                  ; 35                   ;
-;     -- Register only                        ; 3                    ;
+;     -- 4 input functions                    ; 9                    ;
+;     -- 3 input functions                    ; 8                    ;
+;     -- <=2 input functions                  ; 40                   ;
+;     -- Register only                        ; 4                    ;
 ;                                             ;                      ;
 ; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 22                   ;
+;     -- normal mode                          ; 26                   ;
 ;     -- arithmetic mode                      ; 31                   ;
 ;                                             ;                      ;
-; Total registers*                            ; 37 / 6,684 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 37 / 6,272 ( < 1 % ) ;
+; Total registers*                            ; 43 / 6,684 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 43 / 6,272 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 412 ( 0 % )      ;
 ;                                             ;                      ;
-; Total LABs:  partially or completely used   ; 5 / 392 ( 1 % )      ;
+; Total LABs:  partially or completely used   ; 4 / 392 ( 1 % )      ;
 ; Virtual pins                                ; 0                    ;
 ; I/O pins                                    ; 17 / 92 ( 18 % )     ;
 ;     -- Clock pins                           ; 3 / 3 ( 100 % )      ;
@@ -262,12 +263,12 @@ The pin-out file can be found in C:/Users/ailozano/OneDrive - Intel Corporation/
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )        ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )        ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )        ;
-; Average interconnect usage (total/H/V)      ; 0.2% / 0.2% / 0.2%   ;
-; Peak interconnect usage (total/H/V)         ; 0.5% / 0.4% / 0.6%   ;
+; Average interconnect usage (total/H/V)      ; 0.1% / 0.1% / 0.1%   ;
+; Peak interconnect usage (total/H/V)         ; 0.3% / 0.3% / 0.4%   ;
 ; Maximum fan-out                             ; 33                   ;
 ; Highest non-global fan-out                  ; 32                   ;
-; Total fan-out                               ; 281                  ;
-; Average fan-out                             ; 2.02                 ;
+; Total fan-out                               ; 291                  ;
+; Average fan-out                             ; 1.94                 ;
 +---------------------------------------------+----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -280,26 +281,26 @@ The pin-out file can be found in C:/Users/ailozano/OneDrive - Intel Corporation/
 +---------------------------------------------+---------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                 ; Low                            ;
 ;                                             ;                     ;                                ;
-; Total logic elements                        ; 56 / 6272 ( < 1 % ) ; 0 / 6272 ( 0 % )               ;
-;     -- Combinational with no register       ; 19                  ; 0                              ;
-;     -- Register only                        ; 3                   ; 0                              ;
-;     -- Combinational with a register        ; 34                  ; 0                              ;
+; Total logic elements                        ; 61 / 6272 ( < 1 % ) ; 0 / 6272 ( 0 % )               ;
+;     -- Combinational with no register       ; 18                  ; 0                              ;
+;     -- Register only                        ; 4                   ; 0                              ;
+;     -- Combinational with a register        ; 39                  ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic element usage by number of LUT inputs ;                     ;                                ;
-;     -- 4 input functions                    ; 16                  ; 0                              ;
-;     -- 3 input functions                    ; 2                   ; 0                              ;
-;     -- <=2 input functions                  ; 35                  ; 0                              ;
-;     -- Register only                        ; 3                   ; 0                              ;
+;     -- 4 input functions                    ; 9                   ; 0                              ;
+;     -- 3 input functions                    ; 8                   ; 0                              ;
+;     -- <=2 input functions                  ; 40                  ; 0                              ;
+;     -- Register only                        ; 4                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic elements by mode                      ;                     ;                                ;
-;     -- normal mode                          ; 22                  ; 0                              ;
+;     -- normal mode                          ; 26                  ; 0                              ;
 ;     -- arithmetic mode                      ; 31                  ; 0                              ;
 ;                                             ;                     ;                                ;
-; Total registers                             ; 37                  ; 0                              ;
-;     -- Dedicated logic registers            ; 37 / 6272 ( < 1 % ) ; 0 / 6272 ( 0 % )               ;
+; Total registers                             ; 43                  ; 0                              ;
+;     -- Dedicated logic registers            ; 43 / 6272 ( < 1 % ) ; 0 / 6272 ( 0 % )               ;
 ;     -- I/O registers                        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
-; Total LABs:  partially or completely used   ; 5 / 392 ( 1 % )     ; 0 / 392 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 4 / 392 ( 1 % )     ; 0 / 392 ( 0 % )                ;
 ;                                             ;                     ;                                ;
 ; Virtual pins                                ; 0                   ; 0                              ;
 ; I/O pins                                    ; 17                  ; 0                              ;
@@ -315,8 +316,8 @@ The pin-out file can be found in C:/Users/ailozano/OneDrive - Intel Corporation/
 ;     -- Registered Output Connections        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 276                 ; 5                              ;
-;     -- Registered Connections               ; 73                  ; 0                              ;
+;     -- Total Connections                    ; 286                 ; 5                              ;
+;     -- Registered Connections               ; 99                  ; 0                              ;
 ;                                             ;                     ;                                ;
 ; External Connections                        ;                     ;                                ;
 ;     -- Top                                  ; 0                   ; 0                              ;
@@ -349,10 +350,10 @@ The pin-out file can be found in C:/Users/ailozano/OneDrive - Intel Corporation/
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; clk  ; 23    ; 1        ; 0            ; 11           ; 7            ; 33                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; x1   ; 88    ; 5        ; 34           ; 12           ; 21           ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; x2   ; 89    ; 5        ; 34           ; 12           ; 14           ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; x3   ; 90    ; 6        ; 34           ; 12           ; 7            ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; x4   ; 91    ; 6        ; 34           ; 12           ; 0            ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; x1   ; 88    ; 5        ; 34           ; 12           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; x2   ; 89    ; 5        ; 34           ; 12           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; x3   ; 90    ; 6        ; 34           ; 12           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; x4   ; 91    ; 6        ; 34           ; 12           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
@@ -576,6 +577,10 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------+-------------------------------+
 ; Pin Name          ; Reason                        ;
 +-------------------+-------------------------------+
+; x1                ; Incomplete set of assignments ;
+; x2                ; Incomplete set of assignments ;
+; x3                ; Incomplete set of assignments ;
+; x4                ; Incomplete set of assignments ;
 ; ya                ; Incomplete set of assignments ;
 ; yb                ; Incomplete set of assignments ;
 ; yc                ; Incomplete set of assignments ;
@@ -588,24 +593,20 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; display_enable[1] ; Incomplete set of assignments ;
 ; display_enable[2] ; Incomplete set of assignments ;
 ; display_enable[3] ; Incomplete set of assignments ;
-; x2                ; Incomplete set of assignments ;
-; x4                ; Incomplete set of assignments ;
-; x1                ; Incomplete set of assignments ;
-; x3                ; Incomplete set of assignments ;
 ; clk               ; Incomplete set of assignments ;
 +-------------------+-------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                               ;
-+-------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node          ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                          ; Entity Name     ; Library Name ;
-+-------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------+-----------------+--------------+
-; |display7_out                       ; 56 (0)      ; 37 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 17   ; 0            ; 19 (0)       ; 3 (0)             ; 34 (0)           ; |display7_out                                ; display7_out    ; work         ;
-;    |bcd_decoder:display1|           ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |display7_out|bcd_decoder:display1           ; bcd_decoder     ; work         ;
-;    |led_blink:clock_1khz|           ; 45 (45)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 1 (1)             ; 32 (32)          ; |display7_out|led_blink:clock_1khz           ; led_blink       ; work         ;
-;    |shift_register4:enable_outputs| ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 2 (2)            ; |display7_out|shift_register4:enable_outputs ; shift_register4 ; work         ;
-+-------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------+-----------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                       ;
++--------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node           ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                           ; Entity Name           ; Library Name ;
++--------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------+-----------------------+--------------+
+; |display7_out                        ; 61 (0)      ; 43 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 17   ; 0            ; 18 (0)       ; 4 (0)             ; 39 (0)           ; |display7_out                                 ; display7_out          ; work         ;
+;    |bcd_decoder:display1|            ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 1 (1)            ; |display7_out|bcd_decoder:display1            ; bcd_decoder           ; work         ;
+;    |led_blink:clock_1khz|            ; 45 (45)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 1 (1)             ; 32 (32)          ; |display7_out|led_blink:clock_1khz            ; led_blink             ; work         ;
+;    |nibble_shift_register:instance1| ; 10 (10)     ; 10 (10)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 7 (7)            ; |display7_out|nibble_shift_register:instance1 ; nibble_shift_register ; work         ;
++--------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -614,6 +615,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------+----------+---------------+---------------+-----------------------+-----+------+
 ; Name              ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ; TCOE ;
 +-------------------+----------+---------------+---------------+-----------------------+-----+------+
+; x1                ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; x2                ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; x3                ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; x4                ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; ya                ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; yb                ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; yc                ; Output   ; --            ; --            ; --                    ; --  ; --   ;
@@ -626,10 +631,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; display_enable[1] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; display_enable[2] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; display_enable[3] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; x2                ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; x4                ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; x1                ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; x3                ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; clk               ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 +-------------------+----------+---------------+---------------+-----------------------+-----+------+
 
@@ -639,33 +640,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 ; Source Pin / Fanout ; Pad To Core Index ; Setting ;
 +---------------------+-------------------+---------+
-; x2                  ;                   ;         ;
-; x4                  ;                   ;         ;
 ; x1                  ;                   ;         ;
+; x2                  ;                   ;         ;
 ; x3                  ;                   ;         ;
+; x4                  ;                   ;         ;
 ; clk                 ;                   ;         ;
 +---------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                              ;
-+-----------------------------------+-------------------+---------+-------------+--------+----------------------+------------------+---------------------------+
-; Name                              ; Location          ; Fan-Out ; Usage       ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-----------------------------------+-------------------+---------+-------------+--------+----------------------+------------------+---------------------------+
-; clk                               ; PIN_23            ; 33      ; Clock       ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; led_blink:clock_1khz|LessThan0~10 ; LCCOMB_X26_Y4_N30 ; 32      ; Sync. clear ; no     ; --                   ; --               ; --                        ;
-; led_blink:clock_1khz|state        ; FF_X26_Y4_N11     ; 4       ; Clock       ; yes    ; Global Clock         ; GCLK8            ; --                        ;
-+-----------------------------------+-------------------+---------+-------------+--------+----------------------+------------------+---------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                               ;
++-----------------------------------+--------------------+---------+-------------+--------+----------------------+------------------+---------------------------+
+; Name                              ; Location           ; Fan-Out ; Usage       ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------------+--------------------+---------+-------------+--------+----------------------+------------------+---------------------------+
+; clk                               ; PIN_23             ; 33      ; Clock       ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; led_blink:clock_1khz|LessThan0~10 ; LCCOMB_X26_Y11_N30 ; 32      ; Sync. clear ; no     ; --                   ; --               ; --                        ;
+; led_blink:clock_1khz|state        ; FF_X26_Y11_N19     ; 10      ; Clock       ; yes    ; Global Clock         ; GCLK9            ; --                        ;
++-----------------------------------+--------------------+---------+-------------+--------+----------------------+------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                                                       ;
-+----------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Name                       ; Location      ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk                        ; PIN_23        ; 33      ; 2                                    ; Global Clock         ; GCLK2            ; --                        ;
-; led_blink:clock_1khz|state ; FF_X26_Y4_N11 ; 4       ; 0                                    ; Global Clock         ; GCLK8            ; --                        ;
-+----------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                        ;
++----------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name                       ; Location       ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; clk                        ; PIN_23         ; 33      ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
+; led_blink:clock_1khz|state ; FF_X26_Y11_N19 ; 10      ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
++----------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
 +-----------------------------------------------+
@@ -673,29 +674,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------+
 ; Routing Resource Type ; Usage                 ;
 +-----------------------+-----------------------+
-; Block interconnects   ; 50 / 32,401 ( < 1 % ) ;
-; C16 interconnects     ; 4 / 1,326 ( < 1 % )   ;
+; Block interconnects   ; 48 / 32,401 ( < 1 % ) ;
+; C16 interconnects     ; 0 / 1,326 ( 0 % )     ;
 ; C4 interconnects      ; 33 / 21,816 ( < 1 % ) ;
-; Direct links          ; 9 / 32,401 ( < 1 % )  ;
+; Direct links          ; 10 / 32,401 ( < 1 % ) ;
 ; Global clocks         ; 2 / 10 ( 20 % )       ;
-; Local interconnects   ; 46 / 10,320 ( < 1 % ) ;
-; R24 interconnects     ; 5 / 1,289 ( < 1 % )   ;
-; R4 interconnects      ; 36 / 28,186 ( < 1 % ) ;
+; Local interconnects   ; 52 / 10,320 ( < 1 % ) ;
+; R24 interconnects     ; 1 / 1,289 ( < 1 % )   ;
+; R4 interconnects      ; 30 / 28,186 ( < 1 % ) ;
 +-----------------------+-----------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 11.20) ; Number of LABs  (Total = 5) ;
+; Number of Logic Elements  (Average = 15.25) ; Number of LABs  (Total = 4) ;
 +---------------------------------------------+-----------------------------+
 ; 1                                           ; 0                           ;
 ; 2                                           ; 0                           ;
 ; 3                                           ; 0                           ;
-; 4                                           ; 1                           ;
+; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
-; 7                                           ; 1                           ;
+; 7                                           ; 0                           ;
 ; 8                                           ; 0                           ;
 ; 9                                           ; 0                           ;
 ; 10                                          ; 0                           ;
@@ -704,14 +705,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 13                                          ; 1                           ;
 ; 14                                          ; 0                           ;
 ; 15                                          ; 0                           ;
-; 16                                          ; 2                           ;
+; 16                                          ; 3                           ;
 +---------------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.20) ; Number of LABs  (Total = 5) ;
+; LAB-wide Signals  (Average = 1.50) ; Number of LABs  (Total = 4) ;
 +------------------------------------+-----------------------------+
 ; 1 Clock                            ; 4                           ;
 ; 1 Sync. clear                      ; 2                           ;
@@ -721,7 +722,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 18.60) ; Number of LABs  (Total = 5) ;
+; Number of Signals Sourced  (Average = 26.00) ; Number of LABs  (Total = 4) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 0                           ;
@@ -730,8 +731,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 4                                            ; 0                           ;
 ; 5                                            ; 0                           ;
 ; 6                                            ; 0                           ;
-; 7                                            ; 1                           ;
-; 8                                            ; 1                           ;
+; 7                                            ; 0                           ;
+; 8                                            ; 0                           ;
 ; 9                                            ; 0                           ;
 ; 10                                           ; 0                           ;
 ; 11                                           ; 0                           ;
@@ -749,7 +750,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 23                                           ; 0                           ;
 ; 24                                           ; 0                           ;
 ; 25                                           ; 0                           ;
-; 26                                           ; 0                           ;
+; 26                                           ; 1                           ;
 ; 27                                           ; 0                           ;
 ; 28                                           ; 0                           ;
 ; 29                                           ; 0                           ;
@@ -759,41 +760,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-----------------------------+
 
 
-+-------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                       ;
-+-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 8.40) ; Number of LABs  (Total = 5) ;
-+-------------------------------------------------+-----------------------------+
-; 0                                               ; 0                           ;
-; 1                                               ; 0                           ;
-; 2                                               ; 1                           ;
-; 3                                               ; 0                           ;
-; 4                                               ; 1                           ;
-; 5                                               ; 0                           ;
-; 6                                               ; 0                           ;
-; 7                                               ; 1                           ;
-; 8                                               ; 0                           ;
-; 9                                               ; 0                           ;
-; 10                                              ; 0                           ;
-; 11                                              ; 0                           ;
-; 12                                              ; 0                           ;
-; 13                                              ; 1                           ;
-; 14                                              ; 0                           ;
-; 15                                              ; 0                           ;
-; 16                                              ; 1                           ;
-+-------------------------------------------------+-----------------------------+
++--------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                        ;
++--------------------------------------------------+-----------------------------+
+; Number of Signals Sourced Out  (Average = 10.50) ; Number of LABs  (Total = 4) ;
++--------------------------------------------------+-----------------------------+
+; 0                                                ; 0                           ;
+; 1                                                ; 0                           ;
+; 2                                                ; 1                           ;
+; 3                                                ; 0                           ;
+; 4                                                ; 0                           ;
+; 5                                                ; 0                           ;
+; 6                                                ; 0                           ;
+; 7                                                ; 0                           ;
+; 8                                                ; 0                           ;
+; 9                                                ; 0                           ;
+; 10                                               ; 0                           ;
+; 11                                               ; 1                           ;
+; 12                                               ; 0                           ;
+; 13                                               ; 1                           ;
+; 14                                               ; 0                           ;
+; 15                                               ; 0                           ;
+; 16                                               ; 1                           ;
++--------------------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 8.00) ; Number of LABs  (Total = 5) ;
+; Number of Distinct Inputs  (Average = 9.00) ; Number of LABs  (Total = 4) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 1                           ;
 ; 2                                           ; 1                           ;
 ; 3                                           ; 1                           ;
-; 4                                           ; 1                           ;
+; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
 ; 7                                           ; 0                           ;
@@ -884,6 +885,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Total Unchecked    ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
 ; Total Inapplicable ; 0         ; 17           ; 0         ; 17           ; 17           ; 0         ; 0         ; 17           ; 0         ; 0         ; 17           ; 5            ; 17           ; 17           ; 12           ; 17           ; 5            ; 12           ; 17           ; 17           ; 17           ; 5            ; 17           ; 17           ; 17           ; 17           ; 17           ; 0         ; 17           ; 17           ;
 ; Total Fail         ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
+; x1                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; x2                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; x3                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; x4                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; ya                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; yb                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; yc                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -896,10 +901,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; display_enable[1]  ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; display_enable[2]  ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; display_enable[3]  ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; x2                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; x4                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; x1                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; x3                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; clk                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
@@ -956,36 +957,36 @@ This will disable optimization of problematic paths and expose them for further 
 +----------------------------------+----------------------------+-------------------+
 ; Source Register                  ; Destination Register       ; Delay Added in ns ;
 +----------------------------------+----------------------------+-------------------+
-; led_blink:clock_1khz|state       ; led_blink:clock_1khz|state ; 3.453             ;
-; led_blink:clock_1khz|counter[31] ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[29] ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[28] ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[27] ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[26] ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[25] ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[24] ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[21] ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[20] ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[18] ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[16] ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[15] ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[14] ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[13] ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[10] ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[9]  ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[8]  ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[7]  ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[6]  ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[5]  ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[4]  ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[3]  ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[30] ; led_blink:clock_1khz|state ; 1.641             ;
-; led_blink:clock_1khz|counter[12] ; led_blink:clock_1khz|state ; 1.641             ;
+; led_blink:clock_1khz|state       ; led_blink:clock_1khz|state ; 3.452             ;
+; led_blink:clock_1khz|counter[31] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[29] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[28] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[27] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[26] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[25] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[24] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[23] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[22] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[21] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[20] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[19] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[18] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[17] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[16] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[15] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[14] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[13] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[12] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[11] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[10] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[9]  ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[8]  ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[6]  ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[5]  ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[4]  ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[3]  ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[30] ; led_blink:clock_1khz|state ; 1.653             ;
+; led_blink:clock_1khz|counter[7]  ; led_blink:clock_1khz|state ; 1.653             ;
 +----------------------------------+----------------------------+-------------------+
 Note: This table only shows the top 30 path(s) that have the largest delay added for hold.
 
@@ -1031,6 +1032,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "leds[1]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "leds[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "leds[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "mon_clk" is assigned to location or region, but does not exist in design
 Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
@@ -1040,7 +1042,7 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X23_Y0 to location X34_Y11
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X23_Y12 to location X34_Y24
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
@@ -1052,11 +1054,11 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/display7_out/output_files/display7_out.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 5486 megabytes
-    Info: Processing ended: Sat Feb 11 22:28:25 2023
+Info: Quartus Prime Fitter was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 5504 megabytes
+    Info: Processing ended: Sun Apr 16 23:27:12 2023
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +----------------------------+
