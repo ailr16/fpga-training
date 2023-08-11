@@ -64,8 +64,7 @@ always_ff @(posedge clk)
     ```
 
 ### User-Defined Types - Structures
-- Type definitions:
-    - Collection of variables defined as a single name
+- Collection of different variables defined as a single name
     ```v
     typedef struct{
         logic       even;
@@ -78,6 +77,56 @@ always_ff @(posedge clk)
 
     assign par_out.even   = 1'b1;
     assign par_out.parity = 8'h55;
+    ```
+### Arrays
+- Collection of variables of same type defined as a single name
+    ```v
+    logic [7:0] data_mem [1:4][1:256];
+    /*
+    Data type
+    Packed dimensions
+    Array name
+    Unpacked dimensions
+    */
+    assign  data_mem[1][100][7:0] = 8'h55;
+    assign  data_mem[2][80:81] = '{8'h5, 8'ha};
+    ```
+
+### Array Reduction Methods
+- Applicable to to any unpacked array to reducte it to a single value:
+    - sum()
+    - product()
+    - and()
+    - or()
+    - xor()
+    ```v
+    byte data[2:0] = '{1, 3, 5};
+    int result;
+
+    assign result = data.sum;
+    assign result = data.product;
+    assign result = data.and;
+    ```
+
+### Unsized Integer Literals
+- Example
+    ```v
+    module sv_test #(parameter REG_WIDTH = 8)
+            ( input  clk, set,
+              input  [REG_WIDTH-1:0] data_in,
+              output [REG_WIDTH-1:0] data_out);
+    
+    logic [REG_WIDTH-1:0] data_reg,
+
+    always_ff @ (posedge clk, posedge set)
+        if(set)
+            data_reg <= '1;     //Automatically scales regardless of the value of REG_WIDTH
+        else
+            data_reg <= data_in;
+
+    assign data_out = data_reg;
+
+    endmodule    
     ```
 
 #### NOTE: Notes based in *SystemVerilog with the Quartus II Software, Altera, Intel training*
