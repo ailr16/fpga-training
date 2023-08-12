@@ -8,6 +8,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "PIN",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				}

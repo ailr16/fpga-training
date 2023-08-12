@@ -1,7 +1,8 @@
-module led_blink(clk, LED);
+module led_blink(clk, LED, PIN);
 
 input clk;
 output LED;
+output PIN;
 
 reg [31:0] counter;
 reg LED_status;
@@ -22,5 +23,6 @@ always @ (posedge clk)
 		end
 	end
 	assign LED = LED_status;
+	assign PIN = LED_status;
 
 endmodule

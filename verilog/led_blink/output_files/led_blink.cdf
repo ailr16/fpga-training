@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE6E22) Path("C:/Users/ailozano/OneDrive - Intel Corporation/Documents/github/fpga-training/led_blink/output_files/") File("led_blink.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE6E22) Path("/home/ailr16/fpga-training/verilog/led_blink/output_files/") File("led_blink.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
