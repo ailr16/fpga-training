@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sat Aug 12 17:19:29 2023
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : ledBlink
+Top-level Entity Name : ledBlink
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 48 / 6,272 ( < 1 % )
+    Total combinational functions : 48 / 6,272 ( < 1 % )
+    Dedicated logic registers : 27 / 6,272 ( < 1 % )
+Total registers : 27
+Total pins : 3 / 92 ( 3 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )
