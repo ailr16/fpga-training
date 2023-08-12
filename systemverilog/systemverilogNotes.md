@@ -1,6 +1,6 @@
 # SystemVerilog Notes
 
-## SystemVerilog Variables
+## Data Types
 
 ### 2-state Data Types (0, 1)
 |Type    | Additional info |
@@ -128,5 +128,91 @@ always_ff @(posedge clk)
 
     endmodule    
     ```
+
+### Packages
+Allows sharing across multiple modules:
+- parameters
+- types
+- tasks
+- functions
+    ```v
+    package global_defs;
+        enum {IDLE, SOP, DATA_PYLD} pckt_state, nxt_pckt_state;
+        typedef int unsigned uint;
+        typedef logic [15:0] main_bus;
+    endpackage
+    ```
+
+### Importing Packages
+- Scope resolution operator ::
+    ```v
+    module main_ctl
+        (input  global_defs::main_bus in_bus,
+        output ...);
+    ```
+- Import globally
+    ```v
+    import global_defs::*;
+    module main_ctl
+        (input main_bus in_bus,
+        output ...);
+    ```
+- Import locally into module
+    ```v
+    module main_ctl
+        import global_defs::*;
+        (input main_bus in_bus,
+        output ...);
+    ```
+
+### Unsupported Data Types/Features
+- Events
+- Unions
+- Class
+- Queues
+
+## Procedural blocks
+
+### always_ff
+- Sequential logic
+- Specify sensitivity list
+- Outputs can't be assigned in another block
+    ```v
+    always_ff @(posedge clk, posedege rst) begin
+        if (rst)
+            pckt_state <= IDLE;
+        else
+            pckt_state <= nxt_pck_state;
+    ```
+
+### always_comb
+- Model combinatorial logic
+- Inferred sensitivity list
+- Outputs can't be assigned in another block
+- Evaluated at time zero
+    ```v
+    always_comb begin
+        nxt_pckt_state = pckt_state;
+        unique case (pckt_state)
+            IDLE       : if (pkt_rdy)      nxt_pckt_state = SOP;
+            SOP        :                   nxt_pckt_state = SOP;
+            DATA_PYLD  : if (end_of_data)  nxt_pckt_state = CRC;
+            CRC        : if (crc_done)     nxt_pckt_state = EOP;
+            EOP        :                   nxt_pckt_state = IDLE;
+        endcase
+    end
+    ```
+
+### always_latch
+- Model latched logic
+- Inferred sensitivity list
+- Outputs can't be assigned in another block
+- Evaluate at time zero
+    ```v
+    always_latch
+        if (data_enable)
+            data_out_lat <= data_in;
+    ```
+
 
 #### NOTE: Notes based in *SystemVerilog with the Quartus II Software, Altera, Intel training*
