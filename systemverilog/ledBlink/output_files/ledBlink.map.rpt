@@ -1,6 +1,6 @@
 Analysis & Synthesis report for ledBlink
-Sat Aug 12 17:19:27 2023
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Sat Aug 12 23:33:55 2023
+Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
 ---------------------
@@ -23,7 +23,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -40,24 +40,24 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Aug 12 17:19:27 2023       ;
-; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                      ; ledBlink                                    ;
-; Top-level Entity Name              ; ledBlink                                    ;
-; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 48                                          ;
-;     Total combinational functions  ; 48                                          ;
-;     Dedicated logic registers      ; 27                                          ;
-; Total registers                    ; 27                                          ;
-; Total pins                         ; 3                                           ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-+------------------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Aug 12 23:33:55 2023          ;
+; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
+; Revision Name                      ; ledBlink                                       ;
+; Top-level Entity Name              ; ledBlink                                       ;
+; Family                             ; Cyclone IV E                                   ;
+; Total logic elements               ; 48                                             ;
+;     Total combinational functions  ; 48                                             ;
+;     Dedicated logic registers      ; 27                                             ;
+; Total registers                    ; 27                                             ;
+; Total pins                         ; 3                                              ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -265,15 +265,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Aug 12 17:19:24 2023
+    Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+    Info: Processing started: Sat Aug 12 23:33:51 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ledBlink -c ledBlink
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file ledBlink.sv
     Info (12023): Found entity 1: ledBlink File: /home/ailr16/fpga-training/systemverilog/ledBlink/ledBlink.sv Line: 1
 Info (12127): Elaborating entity "ledBlink" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at ledBlink.sv(15): truncated value with size 32 to match size of target (26) File: /home/ailr16/fpga-training/systemverilog/ledBlink/ledBlink.sv Line: 15
+Warning (10230): Verilog HDL assignment warning at ledBlink.sv(8): truncated value with size 26 to match size of target (1) File: /home/ailr16/fpga-training/systemverilog/ledBlink/ledBlink.sv Line: 8
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -282,9 +282,9 @@ Info (21057): Implemented 51 device resources after synthesis - the final resour
     Info (21059): Implemented 2 output pins
     Info (21061): Implemented 48 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 557 megabytes
-    Info: Processing ended: Sat Aug 12 17:19:27 2023
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Peak virtual memory: 572 megabytes
+    Info: Processing ended: Sat Aug 12 23:33:55 2023
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:10
 
 
