@@ -171,7 +171,7 @@ Allows sharing across multiple modules:
 - Class
 - Queues
 
-## Procedural blocks
+## Procedural Blocks
 
 ### always_ff
 - Sequential logic
@@ -214,5 +214,159 @@ Allows sharing across multiple modules:
             data_out_lat <= data_in;
     ```
 
+## Procedural Statements
+
+### Increment and Decrement Operators
+- Up/down counter. Use in combinatorial blocks
+    ```v
+    always_comb
+        begin
+            cntr = cntr_value;
+            if (up)
+                cntr++;
+            else if (down)
+                cntr--;
+        end
+    ```
+
+### Asignment Operators
+- +=
+- -=
+- *=
+- /=
+- %=
+- &=
+- |=
+- ^=
+- <<==
+- .>>==
+- <<<===
+- .>>>===
+
+### Wild Equality and Inequality Operators
+- ==?
+- !=?
+- Treats X or Z bits as don't cares
+    ```v
+    always_comb begin
+        if ( arg ==? condition)
+            ...
+    end
+    ```
+
+### Jump Statements
+- Break
+    - Terminates loop execution
+- Continue
+    - Jumps to loop end
+- Return
+    - Task or function exits inmediately
+
+### Block -names
+```v
+always_comb begin : write_registers     //Label
+    ...
+end : write_registers       //Same label
+```
+
+### Enhanced Case Statemens
+- Unique
+    - Only one case selected
+    - Order is not relevant
+    ```v
+    always_comb begin
+        unique case (addr[7:6])
+            2'b00 : dma_ch_cs    = 1'b1;
+            2'b01 : strt_addr_cs = 1'b1;
+            2'b10 : dma_cnt_cs   = 1'b1;
+            2'b11 : dma_ctrl_cs  = 1'b1;
+        endcase
+    ```
+- Priority
+    - At least one case select
+    - Order is important
+    ```v
+    always_comb begin
+        priority case (1'b1)
+            irq_in[0] : irq_level = 3'b000;
+            irq_in[1] : irq_level = 3'b001;
+            irq_in[2] : irq_level = 3'b010;
+            default   : irq_level = 3'b111;
+        endcase
+    ```
+
+## State Machines
+
+### Guidelines
+- Assign default values to outputs derived from the SM
+- Separate the SM logic from:
+    - Arithmetic functions
+    - Data paths
+    - Output values
+- If the design contains an operation used by more than one state, define the operation outside the SM and then use the value in the output logic of SM
+- Reset System Flops with Async Resets
+    ![Reset RTL](https://github.com/ailr16/fpga-training/blob/main/systemverilog/media/reset_RTL.png?raw=true)
+    ```v
+    module reset_gen(
+        output rst_sync_n,
+        input clk, rst_async_n);
+    
+        logic rst_s1, rst_s2;
+
+        always_ff @ (posedge clk, negedge rst_async_n)
+            if (~rst_async_n) begin
+                rst_s1 <= 1'b0;
+                rst_s2 <= 1'b0;
+            end
+            else begin
+                rst_s1 <= 1'b1;
+                rst_s2 <= rst_s1;
+            end
+        assign rst_sync_n = rst_s2;
+    endmodule
+    ```
+
+### State Enconding with Enums
+```v
+//Default signed int (2-state)
+enum {IDLE, SOP, DATA_PYLD} pckt_state, nxt_pckt_state;
+
+//Unsigned int (2-state)
+enum int unsigned {IDLE, SOP, DATA_PYLD} pckt_state, nxt_pckt_state;
+
+//logic (4-state, 3 bit)
+enum logic {IDLE, SOP, DATA_PYLD} pckt_state, nxt_pckt_state;
+
+//logic set to one-hot (5 bit)
+enum logic [4_0] {
+    IDLE      = 5'b00001,
+    SOP       = 5'b00010,
+    DATA_PYLD = 5'b00100
+    } pckt_state, nxt_pckt_state;
+```
+
+### State Machine Coding style
+```v
+enum logic [2:0] {IDLE, SOP, DATA_PYLD, CRC_EOP} pckt_state, nxt_pck_state;
+
+always_ff @(posedge clk, posedge rst)
+    if (rst)
+        pck_state <= IDLE;
+    else
+        pckt_state <= nxt_pckt_state;
+    
+always_comb begin
+    nxt_pckt_state = pckt_state;
+    unique case (pckt_state)
+        IDLE      : if(pck_rdy)     nxt_pckt_state = SOP;
+        SOP       :                 nxt_pckt_state = SOP;
+        DATA_PYLD : if(end_of_data) nxt_pckt_state = CRC;
+        CRC       : if(crc_done)    nxt_pckt_state = EOP;
+        EOP       :                 nxt_pckt_state = IDLE;
+    endcase
+end
+
+assign sop_state = (pckt_state == SOP);
+```
 
 #### NOTE: Notes based in *SystemVerilog with the Quartus II Software, Altera, Intel training*
