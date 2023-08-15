@@ -368,5 +368,139 @@ end
 
 assign sop_state = (pckt_state == SOP);
 ```
+## Port Connections
+
+### Module Port Connections
+- Verilog module port connections
+    - Ordered connections
+    - Named connections
+- SystemVerilog module port connections
+    - Implicit .name connections
+    - Implicit .* connections
+    - Interfaces
+
+### Implicit .name connections
+- Concise
+- Order independent
+- Self documenting
+```v
+mem_port my_mem(
+    //SV .name convention
+    .clk,
+    .rst,
+    .addr,
+    .data_in,
+    .data_out,
+    .wr,
+    .rd,
+    //Verilog naming convention
+    .mem_data1(ram_data),
+    .mem_data2(flash_data)
+);
+```
+
+### Implicit .* connections
+- Simplifies connections of large netlists
+- Ports and net with the same name are connected
+- Use verilog port naming convention if names are not identical
+```v
+mem_port my_mem(
+    //SV .star convention
+    .*,
+    //Verilog naming convention
+    .mem_data1(ram_data),
+    .mem_data2(flash_data)
+);
+```
+
+### Passing data types through module ports
+- All types can be passed on receiving and transmitting sides
+- Packed and un-packed arrays
+- Structures and unions
+```v
+typedef struct packed{
+    logic [11:0] attrib;
+    logic [19:0] address;
+} tlb;
+
+module tlb_ram(
+    output tlb tlb_out,
+    input logic [5:0] tlb_addr,
+    input logic wr, rd,
+    input tlb tlb_in
+);
+```
+
+### Verilog Bus Module Connections
+
+![Bus in Verilog](https://raw.githubusercontent.com/ailr16/fpga-training/main/systemverilog/media/bus_example_V.png)
+
+![Bus in SystemVerilog](https://raw.githubusercontent.com/ailr16/fpga-training/main/systemverilog/media/bus_exmaple_SV.png)
+
+### Interfaces
+Encapsulate signals into bundles
+- Minimize wiring errors
+- Use *logic* type
+    - For multiple driver or bidirectional signals use *wire*
+- Can create an array of interfaces
+- CAn include *task* and *function* definitions
+
+### Defining an Interface
+```v
+interface my_bus;
+    logic        wr;
+    logic        rd;
+    logic        sel;
+    logic [7:0]  addr;
+    logic [31:0] data_in;
+    logic [31:0] data_out;
+    logic        berr;
+
+    modport master (input data_out, berr,
+                    output wr, rd, sel, add, data_in);
+    
+    modport slave (input wr, rd, sel, addr, data_in,
+                   output data_out, berr);
+endinterface
+```
+
+### Asigning Interface Connection Views
+- Two slave interfaces connecting to CPU and USB master ports
+- Four master ports connecting to slave memory and USB slave port
+```v
+module fabric(
+    input logic clk,
+    my_bus.slave  cpu_bus, usb_bus,
+    my_bus.master sram_mbus, dram_mbus,
+                  flash_mbus, usb_mbus);
+    always_ff @(posedge clk)
+        if(cpu_bus.sel && cpu_bus.addr[7:6] == 2'b00)
+            sram_mbus.sel <= '1;
+        else
+            sram_mbus.sel <= '0;
+```
+
+### Instantiating an Interface
+- Top module
+```v
+module top( ... );
+
+my_bus cpu_bus();
+my_bus usb_sbus();
+my_bus sram_bus();
+my_bus dram_bus();
+my_bus flash_bus();
+my_bus usb_mbus();
+
+fabric i1 ( .clk,
+            .cpu_bus(cpu_bus.slave),
+            .usb_bus(usb_sbus.slave),
+            .sram_bus(sram_bus.master),
+            .dram_bus(dram_bus.master)
+            .flash_bus(flash_bus.master),
+            .usb_mbus(usb_mbus.master));
+...
+endmodule
+```
 
 #### NOTE: Notes based in *SystemVerilog with the Quartus II Software, Altera, Intel training*
