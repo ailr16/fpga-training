@@ -1,5 +1,5 @@
 Fitter report for edge_detector
-Wed Aug 23 00:19:40 2023
+Wed Aug 23 13:17:30 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Wed Aug 23 00:19:40 2023          ;
+; Fitter Status                      ; Successful - Wed Aug 23 13:17:30 2023          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; edge_detector                                  ;
 ; Top-level Entity Name              ; edge_detector                                  ;
@@ -154,13 +154,13 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 32          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.07        ;
+; Average used               ; 1.10        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.5%      ;
-;     Processors 3-16        ;   0.5%      ;
+;     Processor 2            ;   0.7%      ;
+;     Processors 3-16        ;   0.7%      ;
 +----------------------------+-------------+
 
 
@@ -965,8 +965,8 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 1973 megabytes
-    Info: Processing ended: Wed Aug 23 00:19:40 2023
+    Info: Peak virtual memory: 1986 megabytes
+    Info: Processing ended: Wed Aug 23 13:17:30 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:03
 

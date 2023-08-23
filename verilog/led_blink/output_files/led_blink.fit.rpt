@@ -1,6 +1,6 @@
 Fitter report for led_blink
-Sat Aug 12 15:16:10 2023
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Wed Aug 23 16:18:34 2023
+Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
 ---------------------
@@ -45,7 +45,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -62,26 +62,26 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Fitter Summary                                                                   ;
-+------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sat Aug 12 15:16:10 2023       ;
-; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                      ; led_blink                                   ;
-; Top-level Entity Name              ; led_blink                                   ;
-; Family                             ; Cyclone IV E                                ;
-; Device                             ; EP4CE6E22C8                                 ;
-; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 48 / 6,272 ( < 1 % )                        ;
-;     Total combinational functions  ; 47 / 6,272 ( < 1 % )                        ;
-;     Dedicated logic registers      ; 33 / 6,272 ( < 1 % )                        ;
-; Total registers                    ; 33                                          ;
-; Total pins                         ; 3 / 92 ( 3 % )                              ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
-; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
-; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
-+------------------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Fitter Summary                                                                      ;
++------------------------------------+------------------------------------------------+
+; Fitter Status                      ; Successful - Wed Aug 23 16:18:34 2023          ;
+; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
+; Revision Name                      ; led_blink                                      ;
+; Top-level Entity Name              ; led_blink                                      ;
+; Family                             ; Cyclone IV E                                   ;
+; Device                             ; EP4CE6E22C8                                    ;
+; Timing Models                      ; Final                                          ;
+; Total logic elements               ; 48 / 6,272 ( < 1 % )                           ;
+;     Total combinational functions  ; 47 / 6,272 ( < 1 % )                           ;
+;     Dedicated logic registers      ; 33 / 6,272 ( < 1 % )                           ;
+; Total registers                    ; 33                                             ;
+; Total pins                         ; 3 / 92 ( 3 % )                                 ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0 / 276,480 ( 0 % )                            ;
+; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                                 ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                                  ;
++------------------------------------+------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -152,12 +152,13 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 32          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.07        ;
+; Average used               ; 1.08        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.5%      ;
+;     Processor 2            ;   0.5%      ;
+;     Processors 3-16        ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -909,9 +910,9 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 1941 megabytes
-    Info: Processing ended: Sat Aug 12 15:16:10 2023
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 1973 megabytes
+    Info: Processing ended: Wed Aug 23 16:18:35 2023
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:03
 
 

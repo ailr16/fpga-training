@@ -25,30 +25,30 @@
 # 
 # vlog -vlog01compat -work work +incdir+/home/ailr16/fpga-training/verilog/edge_detector {/home/ailr16/fpga-training/verilog/edge_detector/edge_detector.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 00:19:56 on Aug 23,2023
+# Start time: 13:17:57 on Aug 23,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/ailr16/fpga-training/verilog/edge_detector" /home/ailr16/fpga-training/verilog/edge_detector/edge_detector.v 
 # -- Compiling module edge_detector
 # -- Compiling module freq_divider
 # 
 # Top level modules:
 # 	edge_detector
-# End time: 00:19:56 on Aug 23,2023, Elapsed time: 0:00:00
+# End time: 13:17:57 on Aug 23,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+/home/ailr16/fpga-training/verilog/edge_detector {/home/ailr16/fpga-training/verilog/edge_detector/edge_detector_testbench.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 00:19:56 on Aug 23,2023
+# Start time: 13:17:57 on Aug 23,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/ailr16/fpga-training/verilog/edge_detector" /home/ailr16/fpga-training/verilog/edge_detector/edge_detector_testbench.v 
 # -- Compiling module edge_detector_testbench
 # 
 # Top level modules:
 # 	edge_detector_testbench
-# End time: 00:19:56 on Aug 23,2023, Elapsed time: 0:00:00
+# End time: 13:17:57 on Aug 23,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  edge_detector_testbench
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" edge_detector_testbench 
-# Start time: 00:19:56 on Aug 23,2023
+# Start time: 13:17:58 on Aug 23,2023
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading work.edge_detector_testbench(fast)
 # Loading work.edge_detector(fast)
@@ -61,6 +61,6 @@
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # Break key hit
-# Break in Module edge_detector_testbench at /home/ailr16/fpga-training/verilog/edge_detector/edge_detector_testbench.v line 9
-# End time: 00:20:03 on Aug 23,2023, Elapsed time: 0:00:07
+# Simulation stop requested.
+# End time: 13:18:18 on Aug 23,2023, Elapsed time: 0:00:20
 # Errors: 0, Warnings: 0

@@ -11,22 +11,22 @@ z2
 cModel Technology
 Z0 d/home/ailr16/fpga-training/verilog/edge_detector/simulation/questa
 T_opt
-!s110 1692771597
-V:3];H2G5=8f?3BXMDPf4`0
+!s110 1692818278
+VLVQLoaCg_8hXQKO51XF>h2
 04 23 4 work edge_detector_testbench fast 0
-=1-000ae431a4f1-64e5a50d-f2d7-1081e
+=1-000ae431a4f1-64e65b66-1421c-28e2
 !s124 OEM10U3 
 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
 Z1 tCvgOpt 0
 n@_opt
 OL;O;2021.2;73
 vedge_detector
-Z2 !s110 1692771596
+Z2 !s110 1692818277
 !i10b 1
 !s100 L<lPXjhZ1VCE6jPgdXonz2
 I=5ed:C3kCZRI?8WARRaJc3
 R0
-Z3 w1692770596
+Z3 w1692772847
 Z4 8/home/ailr16/fpga-training/verilog/edge_detector/edge_detector.v
 Z5 F/home/ailr16/fpga-training/verilog/edge_detector/edge_detector.v
 !i122 0
@@ -36,7 +36,7 @@ Z7 OL;L;2021.2;73
 r1
 !s85 0
 31
-Z8 !s108 1692771596.000000
+Z8 !s108 1692818277.000000
 Z9 !s107 /home/ailr16/fpga-training/verilog/edge_detector/edge_detector.v|
 Z10 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ailr16/fpga-training/verilog/edge_detector|/home/ailr16/fpga-training/verilog/edge_detector/edge_detector.v|
 !i113 0
@@ -46,14 +46,14 @@ R1
 vedge_detector_testbench
 R2
 !i10b 1
-!s100 [n]MZeJDj>`35f0<7G@CO1
-Ie3zj>Bbm;5I;h0kQeL3?]3
+!s100 2cZ2>n;IBiYOWoL[];g5?2
+IB]i2K8HW@Hm:?V6;8loi32
 R0
-w1692771568
+w1692818241
 8/home/ailr16/fpga-training/verilog/edge_detector/edge_detector_testbench.v
 F/home/ailr16/fpga-training/verilog/edge_detector/edge_detector_testbench.v
 !i122 1
-L0 1 24
+L0 1 30
 R6
 R7
 r1

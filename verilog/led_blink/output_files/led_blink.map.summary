@@ -1,5 +1,5 @@
-Analysis & Synthesis Status : Successful - Sat Aug 12 15:16:09 2023
-Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Wed Aug 23 16:18:32 2023
+Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : led_blink
 Top-level Entity Name : led_blink
 Family : Cyclone IV E
