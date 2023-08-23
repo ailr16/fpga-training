@@ -1,0 +1,13 @@
+module top_module(
+	input clk,
+	input in,
+	output pedge);
+	
+	reg intermediate;
+	
+	always @(posedge clk) begin
+		intermediate <= in;
+		pedge <= (~intermediate) & in;
+	end 
+	
+endmodule

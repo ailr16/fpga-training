@@ -1,0 +1,37 @@
+m255
+K4
+z2
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ailr16/fpga-training/systemverilog/ledBlink/simulation/questa
+vledBlink
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1692685865
+!i10b 1
+!s100 ZU=a4XcGe0edleI^kBOjS0
+I2ATK_d[fVBUkjkZX^6JEm2
+S1
+R0
+w1692681517
+8/home/ailr16/fpga-training/systemverilog/ledBlink/ledBlink.sv
+F/home/ailr16/fpga-training/systemverilog/ledBlink/ledBlink.sv
+!i122 0
+L0 1 21
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2021.2;73
+r1
+!s85 0
+31
+!s108 1692685865.000000
+!s107 /home/ailr16/fpga-training/systemverilog/ledBlink/ledBlink.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ailr16/fpga-training/systemverilog/ledBlink|/home/ailr16/fpga-training/systemverilog/ledBlink/ledBlink.sv|
+!i113 0
+o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -sv -work work +incdir+/home/ailr16/fpga-training/systemverilog/ledBlink -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tCvgOpt 0
+nled@blink

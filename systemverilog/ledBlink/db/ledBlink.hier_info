@@ -26,7 +26,7 @@ clk => counter[22].CLK
 clk => counter[23].CLK
 clk => counter[24].CLK
 clk => counter[25].CLK
-led <= state.DB_MAX_OUTPUT_PORT_TYPE
-pin <= state.DB_MAX_OUTPUT_PORT_TYPE
+led << state.DB_MAX_OUTPUT_PORT_TYPE
+pin << state.DB_MAX_OUTPUT_PORT_TYPE
 
 

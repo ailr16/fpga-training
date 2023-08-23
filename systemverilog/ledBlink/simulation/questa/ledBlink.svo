@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition"
 
-// DATE "08/12/2023 23:34:00"
+// DATE "08/21/2023 23:55:49"
 
 // 
 // Device: Altera EP4CE6E22C8 Package TQFP144
@@ -33,9 +33,9 @@ module ledBlink (
 	clk,
 	led,
 	pin);
-input 	logic clk ;
-output 	logic led ;
-output 	logic pin ;
+input 	clk;
+output 	led;
+output 	pin;
 
 // Design Ports Information
 // led	=>  Location: PIN_87,	 I/O Standard: 2.5 V,	 Current Strength: Default
