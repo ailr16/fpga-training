@@ -1,0 +1,7 @@
+module edge_detector_testbench();
+	reg clk, in;
+	wire pedge, new_clock;
+	
+	edge_detector(.clk(clock), .in(in), .pedge(pedge),.led_new_clock(new_clock);
+	
+endmodule

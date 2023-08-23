@@ -2,15 +2,16 @@ module edge_detector(
 	input clk,
 	input in,
 	output reg pedge,
-	output reg led_new_clock);
+	output led_new_clock);
 	
 	reg intermediate;
 	wire new_clock;
 	
 	freq_divider inst1(.clock(clk), .clk_out(new_clock));
 	
+	assign led_new_clock = new_clock;
+	
 	always @(posedge new_clock) begin
-		led_new_clock <= ~led_new_clock;
 		intermediate <= ~in;
 		pedge <= ((~intermediate) & in);
 	end 
@@ -26,7 +27,7 @@ module freq_divider(
 	
 	always @(posedge clock) begin
 		counter <= counter + 32'd1;
-		if(counter == 32'd50000000) begin
+		if(counter == 32'd5) begin
 			counter <= 32'd0;
 			clk_out <= ~clk_out;
 		end

@@ -1,14 +1,14 @@
-Fitter Status : Successful - Tue Aug 22 23:38:31 2023
+Fitter Status : Successful - Wed Aug 23 00:19:40 2023
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : edge_detector
 Top-level Entity Name : edge_detector
 Family : Cyclone IV E
 Device : EP4CE6E22C8
 Timing Models : Final
-Total logic elements : 60 / 6,272 ( < 1 % )
-    Total combinational functions : 59 / 6,272 ( < 1 % )
-    Dedicated logic registers : 36 / 6,272 ( < 1 % )
-Total registers : 36
+Total logic elements : 48 / 6,272 ( < 1 % )
+    Total combinational functions : 47 / 6,272 ( < 1 % )
+    Dedicated logic registers : 35 / 6,272 ( < 1 % )
+Total registers : 35
 Total pins : 4 / 92 ( 4 % )
 Total virtual pins : 0
 Total memory bits : 0 / 276,480 ( 0 % )
