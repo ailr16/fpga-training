@@ -1,4 +1,0 @@
-module left_rotate8 (input wire clk, output wire [7:0] parallel_output);
-	wire 
-	shift_register8 inst1 (.clk(clk), .bit_in())
-endmodule 
