@@ -1,6 +1,6 @@
 *
 
 !.gitignore
-!.v
-!.sv
-!.vhd
+!/.v
+!/.sv
+!/.vhd
