@@ -3,4 +3,5 @@
 !*.sv
 !*.vhd
 !*.md
+!/boardDocumentation/*.jpg
 !*/
