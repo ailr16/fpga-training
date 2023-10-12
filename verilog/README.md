@@ -2,7 +2,7 @@
 
 NOTE: Some of these exercises are based in this repo: [100-Days-of-RTL](https://github.com/Ummidichandrika/100-Days-of-RTL)  
 
-- **bcd_counter** (0-9 counter)
+- [**bcd_counter**](/verilog/bcd_counter/) (0-9 counter)
 - **bcd_decoder** (binary to 7-segment BCD)
 - **buzzer** (power a buzzer of dev-board)
 - **cla4** (4-bit Carry Look Ahead adder)
