@@ -4,4 +4,6 @@
 !*.vhd
 !*.md
 !/boardDocumentation/*.jpg
+!/verilog/MEDIA/*.jpg
+!/verilog/MEDIA/*.png
 !*/

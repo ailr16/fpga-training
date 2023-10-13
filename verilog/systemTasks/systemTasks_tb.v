@@ -12,7 +12,10 @@ module systemTasks_tb();
 		#10;
 		x = 8'd32;
 		$display("x=%d \t z=%d t=%t", x, z, $time);
-		#20;
+		#10;
+		x = 8'd40;
+		$monitor("x=%d \t z=%d t=%t", x, z, $time);
+		#10;
 		
 	end
 
