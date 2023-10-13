@@ -2,6 +2,8 @@
 
 NOTE: Some of these exercises are based in this repo: [100-Days-of-RTL](https://github.com/Ummidichandrika/100-Days-of-RTL)  
 
+- [**Verilog Notes**](/verilog/verilogNotes.md)
+
 - [**bcd_counter**](/verilog/bcd_counter/) (0-9 counter)
 - [**bcd_decoder**](/verilog/bcd_decoder/) (binary to 7-segment BCD)
 - [**buzzer**](/verilog/buzzer/) (power a buzzer of dev-board)
