@@ -1,10 +1,10 @@
-## Verilog Exercises List
+# Verilog Exercises List
 
-View some useful notes of language:
+### View some useful notes of language:
 
 - [**Verilog Notes**](/verilog/verilogNotes.md)
 
-NOTE: These exercises are based in this repo: [100-Days-of-RTL](https://github.com/Ummidichandrika/100-Days-of-RTL)
+### NOTE: These exercises are based in this repo: [100-Days-of-RTL](https://github.com/Ummidichandrika/100-Days-of-RTL)
 
 - [**bcd_counter**](/verilog/rtl-100-days/bcd_counter/) (0-9 counter)
 - [**cla4**](/verilog/rtl-100-days/cla4/) (4-bit Carry Look Ahead adder)
@@ -17,7 +17,7 @@ NOTE: These exercises are based in this repo: [100-Days-of-RTL](https://github.c
 - [**ringCounter**](/verilog/rtl-100-days/ringCounter/)
 
 
-My exercises:
+### My exercises:
 
 - [**bcd_decoder**](/verilog/bcd_decoder/) (binary to 7-segment BCD)
 - [**buzzer**](/verilog/buzzer/) (power a buzzer of dev-board)
@@ -31,3 +31,4 @@ My exercises:
 - [**display7_out**](/verilog/display7_out/) (show number in 4 multiplexed 7-segment display using many modules)
 - [**led_blink**](/verilog/led_blink/)
 - [**project_7segment**](/verilog/project_7segment/) (binary to 7segment BCD)
+- [**systemTasks**](/verilog/systemTasks/) (Verilog system tasks and functions)
