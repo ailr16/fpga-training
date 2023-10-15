@@ -31,3 +31,39 @@
 
 ### 5. Postponed Region
 - Execute $strobe and $monitor commands that will show the final updated values for the current time slot
+
+
+## Functions and Tasks
+
+Use [**taskAndFunction**](/verilog/taskAndFunction/) exercise as reference
+### Functions
+
+- Has to return something (single value or expression, no void)
+- Can't have output ports
+- Can't return **more than one value**
+- Can't have delays (#) so must be executed at zero time
+- Can't contain @, wait, or xedge
+- Don't consume simulation time
+- May or may not take arguments
+- Can't call another task
+
+```v
+function <return_type> function_name (arguments)
+    ...
+    return value
+endfunction
+```
+
+### Tasks
+
+- Don't return any value
+- Can have output arguments
+- Can contain delays (#) but that's not synthesizable
+- May or may not consume simulation time
+- Can call another function or task
+
+```v
+task task_name (arguments)
+    ...
+endtask
+```

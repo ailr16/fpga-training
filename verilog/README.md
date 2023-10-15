@@ -32,3 +32,4 @@
 - [**led_blink**](/verilog/led_blink/)
 - [**project_7segment**](/verilog/project_7segment/) (binary to 7segment BCD)
 - [**systemTasks**](/verilog/systemTasks/) (Verilog system tasks and functions)
+- [**taskAndFunction**](/verilog/taskAndFunction/) (Using tasks and functions)
