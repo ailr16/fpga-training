@@ -7,3 +7,4 @@
 !/verilog/MEDIA/*.jpg
 !/verilog/MEDIA/*.png
 !*/
+!*.bmp
