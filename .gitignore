@@ -8,3 +8,5 @@
 !/verilog/MEDIA/*.png
 !*/
 !*.bmp
+!*.bdf
+
